@@ -1,10 +1,14 @@
 import React from 'react'
 
+import  {motion} from 'framer-motion'
+import {pageTransitionAnimation} from '../animation'
+
+
 const Blog = () => {
   return (
-    <div>
-      <h1>Thisi my Blog</h1>
-    </div>
+    <motion.div variants={pageTransitionAnimation} initial="hidden" animate="show" exit="exit">
+      <h1>This is  my Blog</h1>
+    </motion.div >
   )
 }
 

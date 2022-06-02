@@ -3,51 +3,25 @@ import Typed from "react-typed";
 import styled from "styled-components";
 import { LayoutStyled, DescriptionStyled, ImageStyled } from "../styles";
 import { motion } from "framer-motion";
+import {
+  lastNameAnimation,
+  firstNameAnimation,
+  typedAnimation,
+  heroImageAnimation,
+} from "./animation";
 
 const Hero = () => {
-  const lastNameAnimation = { 
-    hidden: {opacity: 0},
-    show: { opacity: 1, transition: { duration: 3 }} 
-  }
-
-  const firstNameAnimation = { 
-    hidden: {opacity: 0},
-    show: { opacity: 1, transition: { duration: 3, delay: 1.2 }} 
-  }
-
-  const typedAnimation = { 
-    hidden: {opacity: 0},
-    show: { opacity: 1, transition: { duration: 3, delay: 1.7 }} 
-  }
-
-
   return (
     <HeroStyled>
       <HeroDescriptionStyled>
-        <motion.h1
-          variants={lastNameAnimation}
-          initial="hidden"
-          animate="show"
-      
-          className="last-name"
-        >
+        <motion.h1 variants={lastNameAnimation} className="last-name">
           Howard
         </motion.h1>
-        <motion.h1
-          variants={firstNameAnimation}
-          initial="hidden"
-          animate="show"
-
-          className="first-name"
-        >
+        <motion.h1 variants={firstNameAnimation} className="first-name">
           Oxana
         </motion.h1>
 
-        <motion.div
-          variants={typedAnimation}
-          initial="hidden"
-          animate="show"
-        >
+        <motion.div variants={typedAnimation}>
           <Typed
             className="typed-text"
             strings={["Front-end Developer", "React Developer"]}
@@ -59,7 +33,8 @@ const Hero = () => {
       </HeroDescriptionStyled>
 
       <HeroImageStyled>
-        <img
+        <motion.img
+          variants={heroImageAnimation}
           src={`${process.env.PUBLIC_URL}/images/computer_and_hands.jpg`}
           alt="computer with female hands"
         />

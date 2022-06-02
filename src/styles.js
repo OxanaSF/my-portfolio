@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 export const LayoutStyled = styled.section`
   min-height: 90vh;
@@ -6,13 +7,13 @@ export const LayoutStyled = styled.section`
   grid-template-columns: 40% 60%;
 `
 
-export const DescriptionStyled = styled.div`
+export const DescriptionStyled = styled(motion.div)`
   flex: 1;
   /* padding-right: 5rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 `
 
 export const ImageStyled = styled.div`
@@ -22,4 +23,5 @@ export const ImageStyled = styled.div`
     height: 90vh;
     /* object-fit: cover; */
   }
+  
 `
