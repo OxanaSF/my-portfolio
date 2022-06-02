@@ -14,13 +14,96 @@ export const firstNameAnimation = {
   show: { opacity: 1, transition: { duration: 3, delay: 2.6 } },
 };
 
-
-export const typedAnimation = { 
-  hidden: {opacity: 0},
-  show: { opacity: 1, transition: { duration: 3, delay: 3.6 }} 
-}
+export const typedAnimation = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 3, delay: 3.6 } },
+};
 
 export const heroImageAnimation = {
-    hidden: {scale: 1.5, opacity: 1 },
-    show: {scale: 1, opacity: 1, transition: {duration: 1, delay: 4}}
-}
+  hidden: { scale: 1.5, opacity: 1 },
+  show: { scale: 1, opacity: 1, transition: { duration: 1, delay: 4 } },
+};
+
+export const lineBlogAnimation = {
+  hidden: { width: "0%" },
+  show: {
+    width: "60%",
+    transition: { duration: 0.75, delay: 1 },
+  },
+};
+
+export const slider = {
+  hidden: { x: "-130%" },
+  show: {
+    x: "100%",
+    skew: "0deg",
+    transition: { duration: 1 },
+  },
+};
+
+export const slider2 = {
+    hidden: { x: "-130%" },
+    show: {
+      x: "100%",
+      skew: "0deg",
+      transition: { duration: 1, delay: 0.1 },
+    },
+  };
+
+  export const slider3 = {
+    hidden: { x: "-130%"},
+    show: {
+      x: "100%",
+      skew: "0deg",
+      transition: { duration: 1, delay: 0.2 },
+    },
+  };
+
+  export const slider4 = {
+    hidden: { x: "-130%"},
+    show: {
+      x: "100%",
+      skew: "0deg",
+      transition: { duration: 1, delay: 0.3 },
+    },
+  };
+
+
+
+
+// export const slider = {
+//     hidden: { x: "-130%", skew: "180deg" },
+//     show: {
+//       x: "100%",
+//       skew: "90deg",
+//       transition: { duration: 1 },
+//     },
+//   };
+  
+//   export const slider2 = {
+//       hidden: { x: "-130%", skew: "180deg" },
+//       show: {
+//         x: "100%",
+//         skew: "90deg",
+//         transition: { duration: 1, delay: 0.1 },
+//       },
+//     };
+  
+//     export const slider3 = {
+//       hidden: { x: "-130%", skew: "180deg" },
+//       show: {
+//         x: "100%",
+//         skew: "90deg",
+//         transition: { duration: 1, delay: 0.2 },
+//       },
+//     };
+  
+//     export const slider4 = {
+//       hidden: { x: "-130%", skew: "180deg" },
+//       show: {
+//         x: "100%",
+//         skew: "90deg",
+//         transition: { duration: 1, delay: 0.3 },
+//       },
+//     };
+  

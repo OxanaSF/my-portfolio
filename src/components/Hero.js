@@ -14,16 +14,17 @@ const Hero = () => {
   return (
     <HeroStyled>
       <HeroDescriptionStyled>
-        <motion.h1 variants={lastNameAnimation} className="last-name">
+        <motion.h1 className="last-name" variants={lastNameAnimation}>
           Howard
         </motion.h1>
-        <motion.h1 variants={firstNameAnimation} className="first-name">
+        <motion.h1 className="first-name" variants={firstNameAnimation}>
           Oxana
         </motion.h1>
 
         <motion.div variants={typedAnimation}>
           <Typed
             className="typed-text"
+            
             strings={["Front-end Developer", "React Developer"]}
             typeSpeed={60}
             backSpeed={100}
