@@ -24,7 +24,7 @@ const Hero = () => {
         <motion.div variants={typedAnimation}>
           <Typed
             className="typed-text"
-            
+
             strings={["Front-end Developer", "React Developer"]}
             typeSpeed={60}
             backSpeed={100}
@@ -131,6 +131,7 @@ const HeroDescriptionStyled = styled(DescriptionStyled)`
 `;
 const HeroImageStyled = styled(ImageStyled)`
   opacity: 0.4;
+  border-bottom-left-radius: 20px;
 `;
 
 export default Hero;

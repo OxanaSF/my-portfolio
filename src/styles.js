@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
 
-export const LayoutStyled = styled.section`
+export const LayoutStyled = styled(motion.section)`
   min-height: 90vh;
   display: grid;
   grid-template-columns: 40% 60%;
@@ -21,7 +21,7 @@ export const ImageStyled = styled.div`
   overflow: hidden;
   img {
     height: 90vh;
-    /* object-fit: cover; */
+
   }
   
 `

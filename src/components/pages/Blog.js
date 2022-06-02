@@ -8,17 +8,32 @@ import {
   slider,
   slider2,
   slider3,
-  slider4
+  slider4,
 } from "../animation";
 
 const Blog = () => {
   return (
     <BlogBGStyled>
-  
-        <Frame1Styled variants={slider} initial="hidden" animate="show"></Frame1Styled>
-        <Frame2Styled variants={slider2} initial="hidden" animate="show"></Frame2Styled>
-        <Frame3Styled variants={slider3} initial="hidden" animate="show"></Frame3Styled>
-        <Frame4Styled variants={slider4} initial="hidden" animate="show"></Frame4Styled>
+      <Frame1Styled
+        variants={slider}
+        initial="hidden"
+        animate="show"
+      ></Frame1Styled>
+      <Frame2Styled
+        variants={slider2}
+        initial="hidden"
+        animate="show"
+      ></Frame2Styled>
+      <Frame3Styled
+        variants={slider3}
+        initial="hidden"
+        animate="show"
+      ></Frame3Styled>
+      <Frame4Styled
+        variants={slider4}
+        initial="hidden"
+        animate="show"
+      ></Frame4Styled>
       <motion.div
         className="blog"
         variants={pageTransitionAnimation}
@@ -64,18 +79,15 @@ const Frame1Styled = styled(motion.div)`
   top: 10%;
   width: 100%;
   height: 100vh;
-  /* background: #fffebf; */
   background: #8ecfb9;
   z-index: 2;
 `;
 
 const Frame2Styled = styled(Frame1Styled)`
-  /* background: #ff8efb; */
   background: #1effa9;
 `;
 const Frame3Styled = styled(Frame1Styled)`
-  /* background: #8ed2ff; */
-  background: #9bffb9
+  background: #9bffb9;
 `;
 const Frame4Styled = styled(Frame1Styled)`
   background: #8effa0;

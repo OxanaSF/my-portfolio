@@ -1,20 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import { LayoutStyled, DescriptionStyled, ImageStyled } from "../styles";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import { aboutMeAnimation, aboutImgAnimation } from "./animation";
 
 const About = () => {
+  const controls = useAnimation();
+  const [element, view] = useInView({ threshold: 0.5 });
+
+  if (view) {
+    controls.start("show");
+  } else {
+    controls.start("hidden");
+  }
+
   return (
-    <AboutStyled>
-      <ImageStyled>
+    <AboutStyled ref={element}>
+      <ImageAboutStyled animate={controls} variants={aboutImgAnimation}>
         <div className="about-left-img">
           <img
             src={`${process.env.PUBLIC_URL}/images/oxana_img.jpeg`}
             alt="photo of me"
           />
         </div>
-      </ImageStyled>
+      </ImageAboutStyled>
 
-      <DescriptionStyled>
+      <DescriptionAboutStyled animate={controls} variants={aboutMeAnimation}>
         <div>
           <h2>About me</h2>
           <h6>Web App & Front-end Developer</h6>
@@ -39,18 +52,68 @@ const About = () => {
             Download CV{" "}
           </a>
         </div>
-      </DescriptionStyled>
+      </DescriptionAboutStyled>
     </AboutStyled>
   );
 };
 
 const AboutStyled = styled(LayoutStyled)`
   margin: 15rem 0;
-  background: green;
+  /* background: green; */
 `;
 
-const ImageAboutStyled = styled(ImageStyled)`
+const DescriptionAboutStyled = styled(DescriptionStyled)`
+  padding: 0 10rem;
+  justify-content: space-around;
 
+  h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3.75rem;
+  }
+
+  h6 {
+    color: rgb(31, 30, 30);
+    font-size: 1.3rem;
+    letter-spacing: 0.056rem;
+
+    padding-bottom: 3.125rem;
+    border-bottom: 0.063rem solid rgb(226, 224, 224);
+    margin-bottom: 3rem;
+  }
+
+  p {
+    line-height: 2.7rem;
+
+    letter-spacing: 0.063rem;
+    color: rgb(19, 18, 18);
+    color: rgb(31, 30, 30);
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .about-button {
+    margin-bottom: 17rem;
+  }
+
+  .btn-download {
+    text-decoration: none;
+    padding: 1.7rem 4rem;
+    color: #fff;
+    background-color: black;
+    border-radius: 2.5rem !important;
+    font-size: 1.25rem;
+    letter-spacing: 0.063rem;
+    letter-spacing: 1.5px;
+  }
+`;
+
+const ImageAboutStyled = styled(motion.ImageStyled)`
+  img {
+    height: 70vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 `;
 
 export default About;
