@@ -1,20 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { LayoutStyled, DescriptionStyled, ImageStyled } from "../styles";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { aboutMeAnimation, aboutImgAnimation } from "./animation";
+import { useScroll } from "./useScroll";
 
 const About = () => {
-  const controls = useAnimation();
-  const [element, view] = useInView({ threshold: 0.5 });
-
-  if (view) {
-    controls.start("show");
-  } else {
-    controls.start("hidden");
-  }
+  const [element, controls] = useScroll();
 
   return (
     <AboutStyled ref={element}>
@@ -59,7 +51,19 @@ const About = () => {
 
 const AboutStyled = styled(LayoutStyled)`
   margin: 15rem 0;
-  /* background: green; */
+
+  @media (max-width: 1300px) {
+    margin: 3rem 0;
+  }
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 50% 50%;
+    margin: 3rem 0;
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+  }
 `;
 
 const DescriptionAboutStyled = styled(DescriptionStyled)`
@@ -84,7 +88,6 @@ const DescriptionAboutStyled = styled(DescriptionStyled)`
 
   p {
     line-height: 2.7rem;
-
     letter-spacing: 0.063rem;
     color: rgb(19, 18, 18);
     color: rgb(31, 30, 30);
@@ -101,10 +104,35 @@ const DescriptionAboutStyled = styled(DescriptionStyled)`
     padding: 1.7rem 4rem;
     color: #fff;
     background-color: black;
-    border-radius: 2.5rem !important;
+    border-radius: 2.5rem;
+    border: 4px solid #8effa0;
     font-size: 1.25rem;
     letter-spacing: 0.063rem;
     letter-spacing: 1.5px;
+  }
+
+  @media (max-width: 1100px) {
+    justify-content: center;
+    justify-content: flex-start;
+    padding: 0 2rem 2rem 3rem;
+    margin-top: 4rem;
+
+    .about-button {
+      margin-top: 4rem;
+      align-self: flex-start;
+    }
+
+    @media (max-width: 600px) {
+      h2,
+      h6 {
+        text-align: center;
+      }
+
+      .about-button {
+        margin-top: 4rem;
+        align-self: center;
+      }
+    }
   }
 `;
 
@@ -113,6 +141,14 @@ const ImageAboutStyled = styled(motion.ImageStyled)`
     height: 70vh;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    @media (max-width: 1100px) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+    }
   }
 `;
 

@@ -14,26 +14,35 @@ import {
 const Blog = () => {
   return (
     <BlogBGStyled>
+
       <Frame1Styled
         variants={slider}
         initial="hidden"
         animate="show"
       ></Frame1Styled>
+
+
       <Frame2Styled
         variants={slider2}
         initial="hidden"
         animate="show"
       ></Frame2Styled>
+
+
       <Frame3Styled
         variants={slider3}
         initial="hidden"
         animate="show"
       ></Frame3Styled>
+
+
       <Frame4Styled
         variants={slider4}
         initial="hidden"
         animate="show"
       ></Frame4Styled>
+
+      
       <motion.div
         className="blog"
         variants={pageTransitionAnimation}
@@ -56,7 +65,6 @@ const Blog = () => {
 const BlogBGStyled = styled(motion.section)`
   min-height: 90vh;
   text-align: center;
-  /* background: pink; */
 
   .blog {
     h1 {
@@ -81,6 +89,28 @@ const Frame1Styled = styled(motion.div)`
   height: 100vh;
   background: #8ecfb9;
   z-index: 2;
+
+  @media (max-width: 1300px) {
+    top: 13%;
+  }
+  @media (max-width: 1000px) {
+    top: 12%;
+  }
+  @media (max-width: 912px) {
+    top: 10%;
+  }
+  @media (max-width: 820px) {
+    top: 11.5%;
+  }
+  @media (max-width: 414px) {
+    top: 15%;
+  }
+  @media (max-width: 390px) {
+    top: 16%;
+  }
+  @media (max-width: 375px) {
+    top: 20%;
+  }
 `;
 
 const Frame2Styled = styled(Frame1Styled)`

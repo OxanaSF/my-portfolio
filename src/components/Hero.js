@@ -24,7 +24,6 @@ const Hero = () => {
         <motion.div variants={typedAnimation}>
           <Typed
             className="typed-text"
-
             strings={["Front-end Developer", "React Developer"]}
             typeSpeed={60}
             backSpeed={100}
@@ -44,28 +43,40 @@ const Hero = () => {
   );
 };
 
-const HeroStyled = styled(LayoutStyled)``;
+const HeroStyled = styled(LayoutStyled)`
+  @media (max-width: 1300px) {
+    display: block;
+    position: relative;
+  }
+`;
 
 const HeroDescriptionStyled = styled(DescriptionStyled)`
   transform: translateX(50%);
 
   h1 {
     text-transform: uppercase;
-    font-size: 8rem;
+    font-size: 9rem;
     letter-spacing: 0.25rem;
     font-weight: 700;
     color: white;
+
+    @media (max-width: 1300px) {
+      font-size: 5rem;
+      letter-spacing: 0.15rem;
+  }
   }
 
   .last-name {
     mix-blend-mode: multiply;
     text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
       0 -0.063rem black;
+    /* font-family: 'Mulish', sans-serif; */
   }
 
   .first-name {
     color: black;
     font-family: "Roboto", sans-serif;
+    /* font-family: 'Mulish', sans-serif; */
   }
 
   .typed-text {
@@ -128,10 +139,23 @@ const HeroDescriptionStyled = styled(DescriptionStyled)`
     z-index: -1;
     transition: transform 0.3s ease;
   }
+
+  @media (max-width: 1300px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
 `;
 const HeroImageStyled = styled(ImageStyled)`
   opacity: 0.4;
   border-bottom-left-radius: 20px;
+
+  @media (max-width: 1300px) {
+    border-bottom-left-radius: 0;
+    margin: 0;
+  }
 `;
 
 export default Hero;

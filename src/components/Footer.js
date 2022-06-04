@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <FooterStyled>
         <div>
-          Copyright &copy; {new Date().getFullYear()}
+          &copy; Oxana Howard {new Date().getFullYear()}
           </div>
     </FooterStyled>
   )
@@ -14,8 +14,7 @@ const Footer = () => {
 
 const FooterStyled = styled.footer`
  background: black;
- background: #8effa0;
- color: black;
+ color: #8effa0;
   background-size: cover;
   height: 5rem;
   display: flex;
