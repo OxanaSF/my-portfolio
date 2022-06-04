@@ -5,10 +5,6 @@ export const LayoutStyled = styled(motion.section)`
   min-height: 90vh;
   display: grid;
   grid-template-columns: 40% 60%;
-
-  @media (max-width: 1300px) {
-    /* display: block; */
-  }
 `;
 
 export const DescriptionStyled = styled(motion.div)`

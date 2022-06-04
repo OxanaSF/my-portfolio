@@ -50,7 +50,7 @@ const About = () => {
 };
 
 const AboutStyled = styled(LayoutStyled)`
-  margin: 15rem 0;
+  margin-top: 15rem;
 
   @media (max-width: 1300px) {
     margin: 3rem 0;
@@ -105,7 +105,6 @@ const DescriptionAboutStyled = styled(DescriptionStyled)`
     color: #fff;
     background-color: black;
     border-radius: 2.5rem;
-    border: 4px solid #8effa0;
     font-size: 1.25rem;
     letter-spacing: 0.063rem;
     letter-spacing: 1.5px;

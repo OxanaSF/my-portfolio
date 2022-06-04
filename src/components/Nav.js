@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { lineBlogAnimation } from "../components/animation";
 import { useLocation } from "react-router-dom";
 
 const Nav = () => {
@@ -16,7 +15,25 @@ const Nav = () => {
           <LinkUnderlineStyled
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "40%" : "0" }}
+            animate={{ width: pathname === "/" ? "64%" : "0" }}
+          />
+        </li>
+
+        <li>
+          <Link to="/about">About</Link>
+          <LinkUnderlineStyled
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/about" ? "63.5%" : "0" }}
+          />
+        </li>
+
+        <li>
+          <Link to="/projects">Projects</Link>
+          <LinkUnderlineStyled
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/projects" ? "69.5%" : "0" }}
           />
         </li>
 
@@ -25,7 +42,7 @@ const Nav = () => {
           <LinkUnderlineStyled
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/resume" ? "46%" : "0" }}
+            animate={{ width: pathname === "/resume" ? "69%" : "0" }}
           />
         </li>
 
@@ -34,7 +51,7 @@ const Nav = () => {
           <LinkUnderlineStyled
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/blog" ? "33%" : "0" }}
+            animate={{ width: pathname === "/blog" ? "54%" : "0" }}
           />
         </li>
       </ul>
@@ -58,7 +75,7 @@ const NavStyled = styled.nav`
   }
 
   li {
-    padding-left: 8rem;
+    padding-left: 3rem;
     position: relative;
     padding-bottom: 0.5rem;
   }
@@ -66,7 +83,6 @@ const NavStyled = styled.nav`
   a {
     color: #007bff;
     color: black;
-    /* color: #8effa0; */
   }
 
   @media (max-width: 1300px) {
@@ -81,12 +97,11 @@ const NavStyled = styled.nav`
 
 const LinkUnderlineStyled = styled(motion.div)`
   height: 0.3rem;
-  background: #8effa0;
   background: #007bff;
   width: 0%;
   position: absolute;
   bottom: 0;
-  left: 8rem;
+  left: 3rem;
   border-radius: 2px;
 
 `;

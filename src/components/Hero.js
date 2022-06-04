@@ -63,20 +63,18 @@ const HeroDescriptionStyled = styled(DescriptionStyled)`
     @media (max-width: 1300px) {
       font-size: 5rem;
       letter-spacing: 0.15rem;
-  }
+    }
   }
 
   .last-name {
     mix-blend-mode: multiply;
     text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
       0 -0.063rem black;
-    /* font-family: 'Mulish', sans-serif; */
   }
 
   .first-name {
     color: black;
     font-family: "Roboto", sans-serif;
-    /* font-family: 'Mulish', sans-serif; */
   }
 
   .typed-text {
@@ -104,8 +102,7 @@ const HeroDescriptionStyled = styled(DescriptionStyled)`
     bottom: 0;
     left: 0;
     inset: 0 0 0 0;
-    background: hsl(30, 2%, 73%);
-    /* background: hsl(10, 2%, 90%); */
+    background: hsl(10, 2%, 90%);
     text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
       0 -0.063rem black;
     z-index: -1;
@@ -133,7 +130,6 @@ const HeroDescriptionStyled = styled(DescriptionStyled)`
     left: 0;
     inset: 0 0 0 0;
     background: hsl(10, 2%, 90%);
-    background: hsl(30, 2%, 73%);
     text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
       0 -0.063rem black;
     z-index: -1;
@@ -145,7 +141,6 @@ const HeroDescriptionStyled = styled(DescriptionStyled)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
   }
 `;
 const HeroImageStyled = styled(ImageStyled)`

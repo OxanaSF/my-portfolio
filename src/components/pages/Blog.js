@@ -50,7 +50,7 @@ const Blog = () => {
         animate="show"
         exit="exit"
       >
-        <h1>This is my Blog</h1>
+        <h1>Blog section is coming!</h1>
         <motion.div
           className="line"
           variants={lineBlogAnimation}

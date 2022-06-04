@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html {
+        scroll-behavior: smooth;
         @media(max-width: 1300px){
             font-size: 80%;
         }
