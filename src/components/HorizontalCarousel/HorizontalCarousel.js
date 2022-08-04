@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { webDevProjects } from '../utils/data';
+
+import { webDevProjects } from '../../utils/data';
+import { HorizontalItemStyled } from './HorizontalCarouselStyles'
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
@@ -21,6 +21,7 @@ const HorizontalCarousel = () => {
         {webDevProjects.map((project, index) => {
           return (
             <SplideSlide key={index}>
+             
               <HorizontalItemStyled>
                 <iframe
                   title={index}
@@ -36,23 +37,5 @@ const HorizontalCarousel = () => {
   );
 };
 
-const HorizontalItemStyled = styled(motion.div)`
-  height: 35rem;
-  width: 45rem;
-  border-top: 0.5px solid lightgrey;
-  padding: 80px 40px;
-  cursor: pointer;
-
-  .splide {
-    background: red;
-  }
-
-  .horizontal-item-inside {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.2rem;
-    border: 0.5px solid black;
-  }
-`;
 
 export default HorizontalCarousel;

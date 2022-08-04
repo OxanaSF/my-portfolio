@@ -9,6 +9,7 @@ export const AboutStyled = styled(LayoutStyled)`
   padding: 15rem 0;
   display: flex;
 
+
   .side-bar {
     display: flex;
     flex-direction: column;
@@ -23,6 +24,7 @@ export const AboutStyled = styled(LayoutStyled)`
       padding: 0.3rem;
       border-radius: 20%;
       cursor: pointer;
+    display: flex;
 
       position: relative;
       display: inline-block;
@@ -30,6 +32,9 @@ export const AboutStyled = styled(LayoutStyled)`
       img {
         width: 100%;
       }
+    }
+    .side-icon-container-about {
+      border: 0.2rem solid  #007bff;
     }
   }
 

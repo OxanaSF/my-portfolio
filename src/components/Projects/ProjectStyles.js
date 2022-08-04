@@ -20,8 +20,16 @@ export const ProjectsStyled = styled(motion.section)`
     text-shadow: -0.063rem 0 rgb(201, 198, 198), 0 0.063rem rgb(201, 198, 198),
       0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
 
+    
+    width: 60%;
+    margin: 0 auto;
+
     margin-bottom: 5rem;
-  }
+   
+ 
+
+
+}
 
   h1 {
     background-color: #f8f9fa;
@@ -36,4 +44,57 @@ export const ProjectsStyled = styled(motion.section)`
     padding-left: 1.25rem;
     margin-left: 20px;
   }
+
+  h4 {
+    text-align: right;
+    margin-right: 2rem;
+    display: flex;
+    gap: 0.2rem;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .arrow-left {
+    height: 1.2rem;
+  }
+
+
+  .project-area {
+    display: flex;
+  }
 `;
+
+
+export const SideBarLeftStyled = styled.div`
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  gap: 1rem;
+}
+ 
+
+  .side-icon-container {
+      width: 3rem;
+      height: 3rem;
+      border: 0.2rem solid black;
+      padding: 0.3rem;
+      border-radius: 20%;
+      cursor: pointer;
+      display: flex;
+      position: relative;
+      display: inline-block;
+
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .side-icon-container-projects {
+      border: 0.2rem solid  #007bff;
+    }
+`;
+

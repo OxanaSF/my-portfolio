@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
             font-size: 80%;
         }
         @media(max-width: 1100px){
-            background: pink;
+            /* background: pink; */
         }
     }
 

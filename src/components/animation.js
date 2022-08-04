@@ -24,33 +24,57 @@ export const heroImageAnimation = {
   show: { scale: 1, opacity: 1, transition: { duration: 1, delay: 1.6 } },
 };
 
-export const aboutImageAnimation = {
-  hidden: { x: -300 },
-  show: {
-    x: -10,
-    transition: { duration: 1 },
-  },
-};
+
+// About
+
+// export const aboutImageAnimation = {
+//   hidden: { x: -300 },
+//   show: {
+//     x: -10,
+//     transition: { duration: 1 },
+//   },
+// };
 
 export const aboutMeAnimation = {
   hidden: { opacity: 0, x: 300 },
   show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
 };
 
-export const sideBarIconHome = {
+export const sideBarIconHomeFromRight = {
   hidden: { opacity: 0, x: 300 },
   show: { opacity: 1, x: 0, transition: { duration: 0.8 } },
 };
-export const sideBarIconUser = {
+
+export const sideBarIconHomeFromLeft = {
+  hidden: { opacity: 0, x: -300 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+};
+
+export const sideBarIconUserFromRight  = {
   hidden: { opacity: 0, x: 300 },
   show: { opacity: 1, x: 0, transition: { duration: 0.9 } },
 };
-export const sideBarIconProjects = {
+export const sideBarIconUserFromLeft = {
+  hidden: { opacity: 0, x: -300 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.9 } },
+};
+
+export const sideBarIconProjectsFromRight  = {
   hidden: { opacity: 0, x: 300 },
   show: { opacity: 1, x: 0, transition: { duration: 1 } },
 };
-export const sideBarIconContact = {
+
+export const sideBarIconProjectsFromLeft = {
+  hidden: { opacity: 0, x: -300 },
+  show: { opacity: 1, x: 0, transition: { duration: 1 } },
+};
+
+export const sideBarIconContactFromRight  = {
   hidden: { opacity: 0, x: 300 },
+  show: { opacity: 1, x: 0, transition: { duration: 1.1 } },
+};
+export const sideBarIconContactFromLeft = {
+  hidden: { opacity: 0, x: -300 },
   show: { opacity: 1, x: 0, transition: { duration: 1.1 } },
 };
 

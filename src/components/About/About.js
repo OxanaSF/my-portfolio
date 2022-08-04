@@ -1,16 +1,19 @@
-
 import { motion } from 'framer-motion';
-import { aboutMeAnimation, 
-  aboutImgAnimation, 
-  sideBarIconHome,
-  sideBarIconUser,
-  sideBarIconProjects,
-  sideBarIconContact
- } from '../animation';
+import {
+  aboutMeAnimation,
+  aboutImgAnimation,
+  sideBarIconHomeFromRight ,
+  sideBarIconUserFromRight ,
+  sideBarIconProjectsFromRight ,
+  sideBarIconContactFromRight ,
+} from '../animation';
 import { useScroll } from '../useScroll';
 
-
-import { AboutStyled, DescriptionAboutStyled, ImageAboutStyled } from './AboutStyles'
+import {
+  AboutStyled,
+  DescriptionAboutStyled,
+  ImageAboutStyled,
+} from './AboutStyles';
 
 const About = () => {
   const [element, controls] = useScroll();
@@ -52,7 +55,11 @@ const About = () => {
       </DescriptionAboutStyled>
 
       <motion.div className="side-bar">
-        <motion.div className="side-icon-container" animate={controls} variants={sideBarIconHome}>
+        <motion.div
+          className="side-icon-container"
+          animate={controls}
+          variants={sideBarIconHomeFromRight }
+        >
           <a href="#home">
             <img
               className="side-icon home-icon"
@@ -62,42 +69,50 @@ const About = () => {
           </a>
         </motion.div>
 
-
-        <motion.div className="side-icon-container" animate={controls} variants={sideBarIconUser}>
+        <motion.div
+          className="side-icon-container side-icon-container-about"
+          animate={controls}
+          variants={sideBarIconUserFromRight }
+        >
           <a href="#about">
             <img
               className="side-icon user-icon"
-              src={`${process.env.PUBLIC_URL}/images/user.png`}
+              src={`${process.env.PUBLIC_URL}/images/user-blue.png`}
               alt="user icon"
             />
           </a>
         </motion.div>
 
-        <motion.div className="side-icon-container" animate={controls} variants={sideBarIconProjects}>
+        <motion.div
+          className="side-icon-container"
+          animate={controls}
+          variants={sideBarIconProjectsFromRight }
+        >
           <a href="#projects">
-          <img
-            className="side-icon option"
-            src={`${process.env.PUBLIC_URL}/images/option.png`}
-            alt="option icon"
-          />
+            <img
+              className="side-icon option"
+              src={`${process.env.PUBLIC_URL}/images/option.png`}
+              alt="option icon"
+            />
           </a>
         </motion.div>
 
-        <motion.div className="side-icon-container" animate={controls} variants={sideBarIconContact}>
+        <motion.div
+          className="side-icon-container"
+          animate={controls}
+          variants={sideBarIconContactFromRight }
+        >
           <a href="#contact">
-          <img
-            className="side-icon letter"
-            src={`${process.env.PUBLIC_URL}/images/letter.png`}
-            alt="letter icon"
-          />
+            <img
+              className="side-icon letter"
+              src={`${process.env.PUBLIC_URL}/images/letter.png`}
+              alt="letter icon"
+            />
           </a>
         </motion.div>
       </motion.div>
     </AboutStyled>
   );
 };
-
-
-
 
 export default About;
