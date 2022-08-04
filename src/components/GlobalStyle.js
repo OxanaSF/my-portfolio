@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -19,6 +19,14 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'Mulish', sans-serif;
+    }
+
+    iframe {
+        margin: 0px; 
+        padding: 0px; 
+        height: 100%; 
+        width: 100%;
+        border: none;
     }
 
     button {

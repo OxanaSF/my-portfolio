@@ -1,40 +1,34 @@
-import React, { useRef, useState, useEffect } from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { webDevProjects } from "./data";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { webDevProjects } from './data';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/splide.min.css';
 
 const VerticalCarousel = () => {
-  const [width, setWidth] = useState(0);
-
-  const carousel = useRef();
-
-  useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
-
   return (
     <div>
-      <motion.div
-        ref={carousel}
-        className="carousel"
-        whileTap={{ cursor: "grabbing" }}
+      <Splide
+        options={{
+          perPage: 3,
+          arrows: false,
+          pagination: false,
+          drag: 'free',
+          gap: '5ram',
+        }}
       >
-        <InnerCarouselStyled
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-        >
-          {webDevProjects.map((project, index) => {
-            return (
-              <VerticalItemStyled key={index}>
-                <motion.iframe
+        {webDevProjects.map((project, index) => {
+          return (
+            <SplideSlide key={index}>
+              <VerticalItemStyled>
+                <iframe
                   className="vertical-item-inside"
                   src={project.url}
-                ></motion.iframe>
+                ></iframe>
               </VerticalItemStyled>
-            );
-          })}
-        </InnerCarouselStyled>
-      </motion.div>
+            </SplideSlide>
+          );
+        })}
+      </Splide>
     </div>
   );
 };
@@ -44,15 +38,11 @@ const InnerCarouselStyled = styled(motion.div)`
 `;
 
 const VerticalItemStyled = styled(motion.div)`
-  min-height: 53rem;
-  min-width: 30rem;
-  padding: 40px;
-
-  .vertical-item-inside {
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
-  }
+  height: 53rem;
+  width: 30rem;
+  border-top: 0.5px solid lightgray;
+  padding: 80px 40px;
+  cursor: pointer;
 `;
 
 export default VerticalCarousel;

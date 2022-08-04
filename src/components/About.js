@@ -1,20 +1,26 @@
-import React from "react";
-import styled from "styled-components";
-import { LayoutStyled, DescriptionStyled, ImageStyled } from "../styles";
-import { motion } from "framer-motion";
-import { aboutMeAnimation, aboutImgAnimation } from "./animation";
-import { useScroll } from "./useScroll";
+
+import styled from 'styled-components';
+import { LayoutStyled, DescriptionStyled, ImageStyled } from '../styles';
+import { motion } from 'framer-motion';
+import { aboutMeAnimation, 
+  aboutImgAnimation, 
+  sideBarIconHome,
+  sideBarIconUser,
+  sideBarIconProjects,
+  sideBarIconContact
+ } from './animation';
+import { useScroll } from './useScroll';
 
 const About = () => {
   const [element, controls] = useScroll();
 
   return (
-    <AboutStyled ref={element}>
+    <AboutStyled ref={element} id="about">
       <ImageAboutStyled animate={controls} variants={aboutImgAnimation}>
         <div className="about-left-img">
           <img
             src={`${process.env.PUBLIC_URL}/images/oxana_img.jpeg`}
-            alt="photo of me"
+            alt="myself"
           />
         </div>
       </ImageAboutStyled>
@@ -24,33 +30,99 @@ const About = () => {
           <h2>About me</h2>
           <h6>Web App & Front-end Developer</h6>
           <p className="par1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <p className="par2">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            aute irure dolor in reprehenderit in .
+            Highly analytical, creative, and detail-oriented former attorney
+            turned full stack web developer and software engineer. My technical
+            skills include understanding of object-oriented design patterns and
+            principles, software architecture, algorithms, knowledge of several
+            programming languages and development tools.
           </p>
         </div>
         <div className="about-button">
           <a
             className="btn-download"
-            href={`${process.env.PUBLIC_URL}/images/OxanaH_CV.pdf`}
+            href={`${process.env.PUBLIC_URL}/images/Web_Developer_Oxana_Howard.pdf`}
             alt="photo of me"
             download="OxanaH_CV.pdf"
           >
-            {" "}
-            Download CV{" "}
+            {' '}
+            Download CV{' '}
           </a>
         </div>
       </DescriptionAboutStyled>
+
+      <motion.div className="side-bar">
+        <motion.div className="side-icon-container" animate={controls} variants={sideBarIconHome}>
+          <a href="#home">
+            <img
+              className="side-icon home-icon"
+              src={`${process.env.PUBLIC_URL}/images/home2.png`}
+              alt="home icon"
+            />
+          </a>
+        </motion.div>
+
+
+        <motion.div className="side-icon-container" animate={controls} variants={sideBarIconUser}>
+          <a href="#about">
+            <img
+              className="side-icon user-icon"
+              src={`${process.env.PUBLIC_URL}/images/user.png`}
+              alt="user icon"
+            />
+          </a>
+        </motion.div>
+
+        <motion.div className="side-icon-container" animate={controls} variants={sideBarIconProjects}>
+          <a href="#projects">
+          <img
+            className="side-icon option"
+            src={`${process.env.PUBLIC_URL}/images/option.png`}
+            alt="option icon"
+          />
+          </a>
+        </motion.div>
+
+        <motion.div className="side-icon-container" animate={controls} variants={sideBarIconContact}>
+          <a href="#contact">
+          <img
+            className="side-icon letter"
+            src={`${process.env.PUBLIC_URL}/images/letter.png`}
+            alt="letter icon"
+          />
+          </a>
+        </motion.div>
+      </motion.div>
     </AboutStyled>
   );
 };
 
 const AboutStyled = styled(LayoutStyled)`
-  margin-top: 15rem;
+  padding: 15rem 0;
+  display: flex;
+
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-right: 2rem;
+
+    .side-icon-container {
+      width: 3rem;
+      height: 3rem;
+      border: 0.2rem solid black;
+      padding: 0.3rem;
+      border-radius: 20%;
+      cursor: pointer;
+
+      position: relative;
+      display: inline-block;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 
   @media (max-width: 1300px) {
     margin: 3rem 0;
@@ -94,10 +166,11 @@ const DescriptionAboutStyled = styled(DescriptionStyled)`
     font-size: 1.25rem;
     font-weight: 400;
   }
-
+  /* 
   .about-button {
     margin-bottom: 17rem;
-  }
+    background: pink;
+  } */
 
   .btn-download {
     text-decoration: none;
@@ -108,6 +181,7 @@ const DescriptionAboutStyled = styled(DescriptionStyled)`
     font-size: 1.25rem;
     letter-spacing: 0.063rem;
     letter-spacing: 1.5px;
+    margin-top: 5rem;
   }
 
   @media (max-width: 1100px) {

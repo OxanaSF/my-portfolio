@@ -1,67 +1,79 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import VerticalCarousel from "./VerticalCarousel";
-import HorizontalCarousel from "./HorizontalCarousel";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMobile, faLaptop } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import VerticalCarousel from './VerticalCarousel';
+import HorizontalCarousel from './HorizontalCarousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobile, faLaptop } from '@fortawesome/free-solid-svg-icons';
 
 const Projects = (props) => {
-  const [isMobale, setIsMobale] = useState(false);
+  // const [isMobale, setIsMobale] = useState(false);
 
-  const switchMobalDesctopHandler = () => {
-    setIsMobale(!isMobale);
-  };
+  // const switchMobalDesctopHandler = () => {
+  //   setIsMobale(!isMobale);
+  // };
 
-  const desctopDisplay = (
-    <div
-      type="button"
-      onClick={switchMobalDesctopHandler}
-      className="btn-desktop-mobale"
-    >
-      <div className="portfolio-icons portfolio-icons-left">
-        <FontAwesomeIcon
-          className="portfolio-icon icon-mobale"
-          icon={faMobile}
-        />
+  // const desktopDisplay = (
+  //   <ProjectsButtonStyled
+  //     type="button"
+  //     onClick={switchMobalDesctopHandler}
+  //     className="btn-desktop-mobale"
+  //   >
+  //     <FontAwesomeIcon className="portfolio-icon icon-mobale" icon={faMobile} />
 
-        <span>View the Mobile Version</span>
-      </div>
-    </div>
-  );
+  //     <span>View mobile design</span>
+  //   </ProjectsButtonStyled>
+  // );
 
-  const mobaleDisplay = (
-    <div
-      type="button"
-      onClick={switchMobalDesctopHandler}
-      className="btn-desktop-mobale"
-    >
-      <div className="portfolio-icons">
-        <FontAwesomeIcon
-          className="portfolio-icon icon-desktop"
-          icon={faLaptop}
-        />
-        <span>View the Desktop Version</span>
-      </div>
-    </div>
-  );
+  // const mobaleDisplay = (
+  //   <ProjectsButtonStyled
+  //     type="button"
+  //     onClick={switchMobalDesctopHandler}
+  //     className="btn-desktop-mobale"
+  //   >
+  //     <div className="portfolio-icons">
+  //       <FontAwesomeIcon
+  //         className="portfolio-icon icon-desktop"
+  //         icon={faLaptop}
+  //       />
+  //       <span className="portfolio-text">View the desktop version</span>
+  //     </div>
+  //   </ProjectsButtonStyled>
+  // );
 
   return (
     <ProjectsStyled id="projects">
-      <div className="portfolio-title">Portfolio</div>
+      <div className="portfolio-title">Projects</div>
 
-      <h1 id="scroll-gallery">
-        Projects
-      </h1>
+      {/* <h1 id="scroll-gallery">Projects</h1> */}
 
-      {!isMobale && desctopDisplay}
-      {!isMobale && <HorizontalCarousel />}
+      {/* {!isMobale && desktopDisplay} */}
+      {/* {!isMobale && <HorizontalCarousel />} */}
 
-      {isMobale && mobaleDisplay}
-      {isMobale && <VerticalCarousel />}
+      {/* {isMobale && mobaleDisplay} */}
+      {/* {isMobale && <VerticalCarousel />} */}
+
+      <HorizontalCarousel />
+
+      
     </ProjectsStyled>
   );
 };
+
+const ProjectsButtonStyled = styled.button`
+background: red;
+  cursor: pointer;
+  padding: 1rem;
+  background: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+
+  .portfolio-icon {
+    margin-right: 0.3rem;
+  }
+`;
 
 const ProjectsStyled = styled(motion.section)`
   background-color: #f8f9fa;
@@ -76,10 +88,12 @@ const ProjectsStyled = styled(motion.section)`
     letter-spacing: 0.25rem;
     font-weight: 700;
     color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     mix-blend-mode: multiply;
     text-shadow: -0.063rem 0 rgb(201, 198, 198), 0 0.063rem rgb(201, 198, 198),
       0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
+    
+    margin-bottom: 5rem;
   }
 
   h1 {

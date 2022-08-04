@@ -65,6 +65,7 @@ const Blog = () => {
 const BlogBGStyled = styled(motion.section)`
   min-height: 90vh;
   text-align: center;
+  padding-top: 20%;
 
   .blog {
     h1 {

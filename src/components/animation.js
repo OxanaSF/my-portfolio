@@ -37,6 +37,23 @@ export const aboutImageAnimation = {
     show: { opacity: 1, x: 0, transition: { duration: 0.5 } }
   };
 
+  export const sideBarIconHome = {
+    hidden: { opacity: 0, x: 300 },
+    show: { opacity: 1, x: 0, transition: { duration: 1 } }
+  };
+  export const sideBarIconUser = {
+    hidden: { opacity: 0, x: 300 },
+    show: { opacity: 1, x: 0, transition: { duration: 1.2 } }
+  };
+  export const sideBarIconProjects = {
+    hidden: { opacity: 0, x: 300 },
+    show: { opacity: 1, x: 0, transition: { duration: 1.4 } }
+  };
+  export const sideBarIconContact= {
+    hidden: { opacity: 0, x: 300 },
+    show: { opacity: 1, x: 0, transition: { duration: 1.6 } }
+  };
+
   export const aboutImgAnimation = {
     hidden: { opacity: 0, x: -800 },
     show: { opacity: 1, x: 0, transition: { duration: 0.5 } }

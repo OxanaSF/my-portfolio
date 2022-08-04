@@ -9,7 +9,7 @@ import {pageTransitionAnimation} from '../animation'
 
 const Main = () => {
   return (
-    <motion.div variants={pageTransitionAnimation} initial="hidden" animate="show" exit="exit">
+    <motion.div variants={pageTransitionAnimation} initial="hidden" animate="show" exit="exit" id='home'>
         <Hero />
         <About />
         <Projects />

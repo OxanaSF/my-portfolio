@@ -1,8 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { HashLink as MiddleLink } from 'react-router-hash-link';
+import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const Nav = () => {
   const { pathname } = useLocation();
@@ -14,26 +15,35 @@ const Nav = () => {
           <Link to="/">Home</Link>
           <LinkUnderlineStyled
             transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "64%" : "0" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/' ? '64%' : '0' }}
           />
         </li>
 
         <li>
-          <Link to="/about">About</Link>
+          <MiddleLink to="/#about">About</MiddleLink>
           <LinkUnderlineStyled
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/about" ? "63.5%" : "0" }}
+            animate={{ width: pathname === "/#about" ? "63.5%" : "0" }}
           />
         </li>
 
         <li>
-          <Link to="/projects">Projects</Link>
+          <MiddleLink to="/#projects">Projects</MiddleLink>
           <LinkUnderlineStyled
             transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/projects" ? "69.5%" : "0" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/#projects' ? '69.5%' : '0' }}
+          />
+        </li>
+
+        <li>
+          <MiddleLink to="/#contact">Contact</MiddleLink>
+          <LinkUnderlineStyled
+            transition={{ duration: 0.75 }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/#projects' ? '69.5%' : '0' }}
           />
         </li>
 
@@ -41,8 +51,8 @@ const Nav = () => {
           <Link to="/resume">Resume</Link>
           <LinkUnderlineStyled
             transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/resume" ? "69%" : "0" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/resume' ? '69%' : '0' }}
           />
         </li>
 
@@ -50,8 +60,8 @@ const Nav = () => {
           <Link to="blog">Blog</Link>
           <LinkUnderlineStyled
             transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/blog" ? "54%" : "0" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/blog' ? '54%' : '0' }}
           />
         </li>
       </ul>
@@ -88,10 +98,9 @@ const NavStyled = styled.nav`
   @media (max-width: 1300px) {
     justify-content: center;
     padding-left: 0;
-      ul {
-        flex-direction: column;
-      }
-
+    ul {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -103,7 +112,6 @@ const LinkUnderlineStyled = styled(motion.div)`
   bottom: 0;
   left: 3rem;
   border-radius: 2px;
-
 `;
 
 export default Nav;

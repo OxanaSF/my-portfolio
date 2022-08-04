@@ -12,13 +12,20 @@ const Footer = () => {
             alt="linkedin icon"
           />
         </a>
-        <a href="https://www.instagram.com/oxanasf/" target="_blank">
+        <a href="https://github.com/OxanaSF" target="_blank">
+          <img
+            className="social-media-icon github"
+            src={`${process.env.PUBLIC_URL}/images/github-sign.png`}
+            alt="github icon"
+          />
+        </a>
+        {/* <a href="https://www.instagram.com/oxanasf/" target="_blank">
           <img
             className="social-media-icon instagram"
             src={`${process.env.PUBLIC_URL}/images/instagram.png`}
             alt="instagram icon"
           />
-        </a>
+        </a> */}
       </div>
 
       <div className="copyright">

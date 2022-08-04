@@ -31,7 +31,10 @@ const Contact = () => {
 
 
   return (
-    <ContactStyled>
+    <ContactStyled id="contact">
+      <div className="contact-header">
+      <h1 id="scroll-gallery">Contact Me</h1>
+      </div>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />
@@ -51,7 +54,26 @@ export default Contact;
 
 const ContactStyled = styled.section`
   text-align: center;
-  width: 600px;
+  width: 70%;
+  margin: 15% auto;
+
+  .contact-header {
+    h1 {
+      /* background-color: #f8f9fa; */
+    display: grid;
+    justify-items: start;
+    font-size: 4.75rem;
+    font-size: 3.75rem;
+    margin-bottom: 0rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 3.125rem;
+
+ 
+    }
+
+  }
+
   form {
     display: flex;
     align-items: flex-start;
@@ -85,13 +107,16 @@ const ContactStyled = styled.section`
     }
     label {
       margin-top: 1rem;
+      margin-bottom: 0.3rem;
     }
     input[type="submit"] {
+      height: 4rem;
       margin-top: 2rem;
       cursor: pointer;
-      background: rgb(249, 105, 14);
+      background: black;
       color: white;
       border: none;
+      letter-spacing: 0.1rem;
     }
   }
 `;
