@@ -25,81 +25,80 @@ export const heroImageAnimation = {
 };
 
 export const aboutImageAnimation = {
-    hidden: { x: -300 },
-    show: {
-      x: -10,
-      transition: { duration: 1 },
-    },
-  };
+  hidden: { x: -300 },
+  show: {
+    x: -10,
+    transition: { duration: 1 },
+  },
+};
 
-  export const aboutMeAnimation = {
-    hidden: { opacity: 0, x: 300 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-  };
+export const aboutMeAnimation = {
+  hidden: { opacity: 0, x: 300 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
 
-  export const sideBarIconHome = {
-    hidden: { opacity: 0, x: 300 },
-    show: { opacity: 1, x: 0, transition: { duration: 1 } }
-  };
-  export const sideBarIconUser = {
-    hidden: { opacity: 0, x: 300 },
-    show: { opacity: 1, x: 0, transition: { duration: 1.2 } }
-  };
-  export const sideBarIconProjects = {
-    hidden: { opacity: 0, x: 300 },
-    show: { opacity: 1, x: 0, transition: { duration: 1.4 } }
-  };
-  export const sideBarIconContact= {
-    hidden: { opacity: 0, x: 300 },
-    show: { opacity: 1, x: 0, transition: { duration: 1.6 } }
-  };
+export const sideBarIconHome = {
+  hidden: { opacity: 0, x: 300 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+};
+export const sideBarIconUser = {
+  hidden: { opacity: 0, x: 300 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.9 } },
+};
+export const sideBarIconProjects = {
+  hidden: { opacity: 0, x: 300 },
+  show: { opacity: 1, x: 0, transition: { duration: 1 } },
+};
+export const sideBarIconContact = {
+  hidden: { opacity: 0, x: 300 },
+  show: { opacity: 1, x: 0, transition: { duration: 1.1 } },
+};
 
-  export const aboutImgAnimation = {
-    hidden: { opacity: 0, x: -800 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-  };
-
+export const aboutImgAnimation = {
+  hidden: { opacity: 0, x: -800 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
 
 export const lineBlogAnimation = {
-  hidden: { width: "0%" },
+  hidden: { width: '0%' },
   show: {
-    width: "60%",
+    width: '60%',
     transition: { duration: 0.75, delay: 1 },
   },
 };
 
 export const slider = {
-  hidden: { x: "-130%" },
+  hidden: { x: '-130%' },
   show: {
-    x: "100%",
-    skew: "0deg",
+    x: '100%',
+    skew: '0deg',
     transition: { duration: 1 },
   },
 };
 
 export const slider2 = {
-  hidden: { x: "-130%" },
+  hidden: { x: '-130%' },
   show: {
-    x: "100%",
-    skew: "0deg",
+    x: '100%',
+    skew: '0deg',
     transition: { duration: 1, delay: 0.1 },
   },
 };
 
 export const slider3 = {
-  hidden: { x: "-130%" },
+  hidden: { x: '-130%' },
   show: {
-    x: "100%",
-    skew: "0deg",
+    x: '100%',
+    skew: '0deg',
     transition: { duration: 1, delay: 0.2 },
   },
 };
 
 export const slider4 = {
-  hidden: { x: "-130%" },
+  hidden: { x: '-130%' },
   show: {
-    x: "100%",
-    skew: "0deg",
+    x: '100%',
+    skew: '0deg',
     transition: { duration: 1, delay: 0.3 },
   },
 };

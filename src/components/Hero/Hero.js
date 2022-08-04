@@ -1,14 +1,14 @@
 import React from "react";
 import Typed from "react-typed";
 import styled from "styled-components";
-import { LayoutStyled, DescriptionStyled, ImageStyled } from "../styles";
+import { LayoutStyled, DescriptionStyled, ImageStyled } from "../../styles/styles";
 import { motion } from "framer-motion";
 import {
   lastNameAnimation,
   firstNameAnimation,
   typedAnimation,
   heroImageAnimation,
-} from "./animation";
+} from "../animation";
 
 const Hero = () => {
   return (
@@ -22,13 +22,13 @@ const Hero = () => {
         </motion.h1>
 
         <motion.div variants={typedAnimation}>
-          {/* <Typed
+          <Typed
             className="typed-text"
             strings={["Front-end Developer", "React Developer"]}
             typeSpeed={60}
             backSpeed={100}
             loop
-          /> */}
+          />
         </motion.div>
       </HeroDescriptionStyled>
 
@@ -42,6 +42,9 @@ const Hero = () => {
     </HeroStyled>
   );
 };
+
+
+
 
 const HeroStyled = styled(LayoutStyled)`
   @media (max-width: 1300px) {
