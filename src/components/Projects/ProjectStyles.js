@@ -30,20 +30,6 @@ export const ProjectsStyled = styled(motion.section)`
       0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
   }
 
-  /* h1 {
-    background-color: #f8f9fa;
-    display: grid;
-    justify-items: start;
-    font-size: 4.75rem;
-    font-size: 3.75rem;
-    margin-bottom: 0rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding-bottom: 3.125rem;
-    padding-left: 1.25rem;
-    margin-left: 20px;
-  } */
-
   h4 {
     text-align: right;
     margin-right: 2rem;
@@ -62,14 +48,11 @@ export const ProjectsStyled = styled(motion.section)`
     display: flex;
   }
 
-
-
-
   @media (max-width: 900px) {
     .portfolio-title {
-    font-size: 3rem;
-    margin-left: 2rem;
-  }
+      font-size: 3rem;
+      margin-left: 2rem;
+    }
   }
 `;
 
@@ -105,13 +88,9 @@ export const SideBarLeftStyled = styled.div`
 
 export const CirculeStyled = styled.div`
   #progress {
-    /* position: fixed;
-    top: 20px;
-    left: 20px; */
     transform: rotate(-90deg);
     display: flex;
     justify-content: right;
-    /* margin-left: 2rem; */
   }
 
   circle {
@@ -173,12 +152,7 @@ export const ProjectColectionStyled = styled.ul`
     border-radius: 0.8rem;
   }
 
-
-
-
   @media (max-width: 900px) {
     height: 20rem;
-
-    
   }
 `;
