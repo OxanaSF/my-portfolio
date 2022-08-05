@@ -1,6 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
-
 
 export const ProjectsStyled = styled(motion.section)`
   background-color: #f8f9fa;
@@ -8,6 +7,16 @@ export const ProjectsStyled = styled(motion.section)`
   text-align: center;
   padding-top: 6.25rem;
   padding-bottom: 3.125rem;
+
+  .projects-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 7rem;
+  }
 
   .portfolio-title {
     text-transform: uppercase;
@@ -19,17 +28,7 @@ export const ProjectsStyled = styled(motion.section)`
     mix-blend-mode: multiply;
     text-shadow: -0.063rem 0 rgb(201, 198, 198), 0 0.063rem rgb(201, 198, 198),
       0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
-
-    
-    width: 60%;
-    margin: 0 auto;
-
-    margin-bottom: 5rem;
-   
- 
-
-
-}
+  }
 
   h1 {
     background-color: #f8f9fa;
@@ -52,49 +51,115 @@ export const ProjectsStyled = styled(motion.section)`
     gap: 0.2rem;
     justify-content: right;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   .arrow-left {
     height: 1.2rem;
   }
 
-
   .project-area {
     display: flex;
   }
 `;
 
-
 export const SideBarLeftStyled = styled.div`
-
-.side-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 2rem;
-  gap: 1rem;
-}
- 
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    gap: 1rem;
+  }
 
   .side-icon-container {
-      width: 3rem;
-      height: 3rem;
-      border: 0.2rem solid black;
-      padding: 0.3rem;
-      border-radius: 20%;
-      cursor: pointer;
-      display: flex;
-      position: relative;
-      display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border: 0.2rem solid black;
+    padding: 0.3rem;
+    border-radius: 20%;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    display: inline-block;
 
-
-      img {
-        width: 100%;
-      }
+    img {
+      width: 100%;
     }
+  }
 
-    .side-icon-container-projects {
-      border: 0.2rem solid  #007bff;
-    }
+  .side-icon-container-projects {
+    border: 0.2rem solid #007bff;
+  }
 `;
 
+export const CirculeStyled = styled.div`
+  #progress {
+    /* position: fixed;
+    top: 20px;
+    left: 20px; */
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: right;
+    /* margin-left: 2rem; */
+  }
+
+  circle {
+    stroke-dashoffset: 0;
+    stroke-width: 10%;
+    fill: none;
+  }
+
+  .bg {
+    stroke: black;
+    opacity: 0.3;
+  }
+
+  #progress .indicator {
+    stroke: #007bff;
+  }
+`;
+
+export const ProjectColectionStyled = styled.ul`
+  display: flex;
+  list-style: none;
+  height: 25rem;
+  overflow-x: scroll;
+  margin: 0 auto;
+
+  gap: 2rem;
+  margin-left: 2rem;
+
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: #fff3;
+    -webkit-border-radius: 1ex;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #007bff;
+    -webkit-border-radius: 1ex;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: #fff3;
+  }
+
+  li {
+    width: 45rem;
+    flex: 0 0 200px;
+    /* background: var(--accent); */
+    margin: 0 20px 0 0;
+    border: 0.2rem solid rgb(225, 225, 225);
+    border-radius: 1rem;
+  }
+  li:last-of-type {
+    margin: 0;
+  }
+
+  .horizontal-item-inside {
+    width: 43rem;
+    border-radius: 0.8rem;
+  }
+`;
