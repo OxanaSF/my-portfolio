@@ -8,7 +8,7 @@ const Nav = () => {
   const { pathname } = useLocation();
 
   return (
-    <NavStyled>
+    <NavStyled id="nav">
       <ul>
         <li>
           <Link to="/">Home</Link>

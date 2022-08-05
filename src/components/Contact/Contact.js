@@ -77,7 +77,7 @@ const Contact = () => {
           animate={controls}
           variants={sideBarIconHomeFromRight }
           >
-          <a href="#home">
+          <a href="#nav">
             <img
               className="side-icon home-icon"
               src={`${process.env.PUBLIC_URL}/images/home2.png`}
