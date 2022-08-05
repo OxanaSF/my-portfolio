@@ -30,7 +30,7 @@ export const AboutStyled = styled(LayoutStyled)`
       display: inline-block;
 
       img {
-        width: 100%;
+        max-width: 100%;
       }
     }
     .side-icon-container-about {
@@ -47,8 +47,16 @@ export const AboutStyled = styled(LayoutStyled)`
     margin: 3rem 0;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
+    padding: 0 0 5rem 0;
     display: block;
+
+    .side-bar {
+      flex-direction: row;
+      margin-top: 2rem;
+
+  
+    }
   }
 `;
 

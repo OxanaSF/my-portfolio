@@ -30,7 +30,7 @@ export const ProjectsStyled = styled(motion.section)`
       0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
   }
 
-  h1 {
+  /* h1 {
     background-color: #f8f9fa;
     display: grid;
     justify-items: start;
@@ -42,7 +42,7 @@ export const ProjectsStyled = styled(motion.section)`
     padding-bottom: 3.125rem;
     padding-left: 1.25rem;
     margin-left: 20px;
-  }
+  } */
 
   h4 {
     text-align: right;
@@ -60,6 +60,16 @@ export const ProjectsStyled = styled(motion.section)`
 
   .project-area {
     display: flex;
+  }
+
+
+
+
+  @media (max-width: 900px) {
+    .portfolio-title {
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
   }
 `;
 
@@ -161,5 +171,14 @@ export const ProjectColectionStyled = styled.ul`
   .horizontal-item-inside {
     width: 43rem;
     border-radius: 0.8rem;
+  }
+
+
+
+
+  @media (max-width: 900px) {
+    height: 20rem;
+
+    
   }
 `;

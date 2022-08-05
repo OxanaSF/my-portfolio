@@ -111,6 +111,8 @@ const About = () => {
           </a>
         </motion.div>
       </motion.div>
+
+      
     </AboutStyled>
   );
 };

@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-
-
 export const ContactContainerStyled = styled(motion.div)`
   display: flex;
 `;
@@ -15,28 +13,26 @@ export const SideBarStyled = styled(motion.div)`
   padding-right: 2rem;
 
   .side-icon-container {
-      width: 2.7rem;
-      height: 2.7rem;
-      border: 0.2rem solid black;
-      padding: 0.3rem;
-      border-radius: 20%;
-      cursor: pointer;
-      display: flex;
-      
+    width: 2.7rem;
+    height: 2.7rem;
+    border: 0.2rem solid black;
+    padding: 0.3rem;
+    border-radius: 20%;
+    cursor: pointer;
+    display: flex;
 
-      position: relative;
-      display: inline-block;
+    position: relative;
+    display: inline-block;
 
-      img {
-        width: 100%;
-      }
+    img {
+      width: 100%;
     }
+  }
 
-    .side-icon-container-letter {
-      border: 0.2rem solid  #007bff;
-    }
+  .side-icon-container-letter {
+    border: 0.2rem solid #007bff;
+  }
 `;
-
 
 export const ContactStyled = styled(motion.section)`
   text-align: center;
@@ -47,7 +43,6 @@ export const ContactStyled = styled(motion.section)`
     h1 {
       display: grid;
       justify-items: start;
-      font-size: 4.75rem;
       font-size: 3.75rem;
       margin-bottom: 0rem;
       text-transform: uppercase;
@@ -86,13 +81,13 @@ export const ContactStyled = styled(motion.section)`
       border: 1px solid rgb(220, 220, 220);
       &:focus {
         border: 2px solid #17e5be;
+      }
+      label {
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+        letter-spacing: 0.1rem;
+      }
     }
-    label {
-      margin-top: 1rem;
-      margin-bottom: 0.3rem;
-      letter-spacing: 0.1rem;
-    }
-  }
     input[type='submit'] {
       height: 4rem;
       margin-top: 2rem;
@@ -103,7 +98,13 @@ export const ContactStyled = styled(motion.section)`
       letter-spacing: 0.2rem;
       font-size: 1rem;
     }
-  
+  }
 
+  @media (max-width: 900px) {
+    .contact-header {
+      h1 {
+        font-size: 2.75rem;
+      }
+    }
   }
 `;
