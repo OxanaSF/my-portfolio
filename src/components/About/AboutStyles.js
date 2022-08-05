@@ -18,8 +18,8 @@ export const AboutStyled = styled(LayoutStyled)`
     margin-right: 2rem;
 
     .side-icon-container {
-      width: 3rem;
-      height: 3rem;
+      width: 2.7rem;
+      height: 2.7rem;
       border: 0.2rem solid black;
       padding: 0.3rem;
       border-radius: 20%;
