@@ -60,7 +60,7 @@ const About = () => {
           animate={controls}
           variants={sideBarIconHomeFromRight }
         >
-          <a href="#nav">
+          <a href="#top">
             <img
               className="side-icon home-icon"
               src={`${process.env.PUBLIC_URL}/images/home2.png`}
@@ -77,7 +77,7 @@ const About = () => {
           <a href="#about">
             <img
               className="side-icon user-icon"
-              src={`${process.env.PUBLIC_URL}/images/user-blue.png`}
+              src={`${process.env.PUBLIC_URL}/images/user.png`}
               alt="user icon"
             />
           </a>

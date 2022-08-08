@@ -33,7 +33,7 @@ const Projects = (props) => {
               animate={controls}
               variants={sideBarIconHomeFromLeft}
             >
-              <a href="#nav">
+              <a href="#top">
                 <img
                   className="side-icon home-icon"
                   src={`${process.env.PUBLIC_URL}/images/home2.png`}
@@ -64,7 +64,7 @@ const Projects = (props) => {
               <a href="#projects">
                 <img
                   className="side-icon option"
-                  src={`${process.env.PUBLIC_URL}/images/menu-blue.png`}
+                  src={`${process.env.PUBLIC_URL}/images/menu.png`}
                   alt="option icon"
                 />
               </a>

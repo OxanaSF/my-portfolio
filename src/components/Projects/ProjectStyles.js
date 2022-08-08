@@ -50,7 +50,7 @@ export const ProjectsStyled = styled(motion.section)`
 
   @media (max-width: 900px) {
     .portfolio-title {
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin-left: 2rem;
     }
   }
@@ -83,6 +83,8 @@ export const SideBarLeftStyled = styled.div`
 
   .side-icon-container-projects {
     border: 0.2rem solid #007bff;
+    border: 0.2rem solid #2b5876;
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); 
   }
 `;
 
@@ -106,6 +108,7 @@ export const CirculeStyled = styled.div`
 
   #progress .indicator {
     stroke: #007bff;
+    stroke: #2b5876;
   }
 `;
 
@@ -128,6 +131,7 @@ export const ProjectColectionStyled = styled.ul`
 
   ::-webkit-scrollbar-thumb {
     background: #007bff;
+    background: #2b5876;
     -webkit-border-radius: 1ex;
   }
 
@@ -154,5 +158,6 @@ export const ProjectColectionStyled = styled.ul`
 
   @media (max-width: 900px) {
     height: 20rem;
+    margin: 0 10%;
   }
 `;

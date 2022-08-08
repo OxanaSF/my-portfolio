@@ -20,8 +20,8 @@ export const typedAnimation = {
 };
 
 export const heroImageAnimation = {
-  hidden: { scale: 1.5, opacity: 1 },
-  show: { scale: 1, opacity: 1, transition: { duration: 1, delay: 1.6 } },
+  hidden: { scale: 2, opacity: 1 },
+  show: { scale: 1.5, opacity: 1, transition: { duration: 1, delay: 1.6 } },
 };
 
 

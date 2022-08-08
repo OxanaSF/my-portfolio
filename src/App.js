@@ -2,7 +2,8 @@ import GlobalStyle from './styles/GlobalStyle';
 import Home from './components/pages/Home';
 import Resume from './components/pages/Resume';
 import Blog from './components/pages/Blog';
-import Nav from './components/Nav/Nav';
+// import Nav from './components/Nav/Nav';
+import Nav from './components/NavTwo/NavTwo';
 import Footer from './components/Footer/Footer';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -15,15 +16,17 @@ function App() {
       <GlobalStyle />
 
       <Router>
-        <Nav />
+       
         <AnimatePresence>
+        <Nav />
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/resume" exact element={<Resume />} />
             <Route path="/blog" exact element={<Blog />} />
           </Routes>
+          <Footer />
         </AnimatePresence>
-        <Footer />
+        
       </Router>
     </div>
   );

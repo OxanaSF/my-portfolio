@@ -24,6 +24,7 @@ export const SideBarStyled = styled(motion.div)`
     position: relative;
     display: inline-block;
 
+
     img {
       width: 100%;
     }
@@ -31,6 +32,8 @@ export const SideBarStyled = styled(motion.div)`
 
   .side-icon-container-letter {
     border: 0.2rem solid #007bff;
+    border: 0.2rem solid #2b5876;
+      box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); 
   }
 `;
 
@@ -66,6 +69,7 @@ export const ContactStyled = styled(motion.section)`
       border: 1px solid rgb(220, 220, 220);
       &:focus {
         border: 2px solid #17e5be;
+        border: 2px solid #2b5876;
       }
     }
 
@@ -81,6 +85,7 @@ export const ContactStyled = styled(motion.section)`
       border: 1px solid rgb(220, 220, 220);
       &:focus {
         border: 2px solid #17e5be;
+        border: 2px solid #2b5876;
       }
       label {
         margin-top: 1rem;

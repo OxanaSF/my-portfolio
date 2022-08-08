@@ -18,6 +18,8 @@ const Resume = () => {
 };
 
 const ResumeStyled = styled(motion.section)`
+  width: 90%;
+  margin: auto;
 
 `;
 

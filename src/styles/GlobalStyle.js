@@ -5,20 +5,19 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+
+        scrollbar-width: thin;
     }
 
     html {
-        scroll-behavior: smooth;
-        @media(max-width: 1300px){
-            font-size: 80%;
-        }
-        @media(max-width: 1100px){
-            /* background: pink; */
-        }
-    }
+  scroll-behavior: smooth;
+}
+
+
 
     body {
         font-family: 'Mulish', sans-serif;
+        overflow-x: hidden;
     }
 
     iframe {
@@ -40,6 +39,9 @@ const GlobalStyle = createGlobalStyle`
     a {
             text-decoration: none;
         }
+
+
+
 `;
 
 export default GlobalStyle;

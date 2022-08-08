@@ -10,11 +10,13 @@ export const NavStyled = styled.nav`
   padding: 1rem 5rem;
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.1);
 
+
   ul {
     display: flex;
     font-size: 1.875rem;
     font-weight: 500;
   }
+
 
   li {
     padding-left: 3rem;
@@ -27,12 +29,15 @@ export const NavStyled = styled.nav`
     color: black;
   }
 
+
+ 
   @media (max-width: 1300px) {
     justify-content: center;
     padding-left: 0;
     ul {
       flex-direction: column;
     }
+
   }
 `;
 

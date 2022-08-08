@@ -139,13 +139,16 @@ const HeroDescriptionStyled = styled(DescriptionStyled)`
     transition: transform 0.3s ease;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1400px) {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 `;
+
+
+
 const HeroImageStyled = styled(ImageStyled)`
   opacity: 0.4;
   border-bottom-left-radius: 20px;
