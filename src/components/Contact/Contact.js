@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import {
   ContactStyled,
@@ -43,7 +43,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log('message sent');
-          setEmailSent(true);
+          callBack();
         },
         (error) => {
           console.log(error.text);
@@ -51,15 +51,17 @@ const Contact = () => {
       );
   };
 
-  useEffect(() => {
-    if (emailSent) {
-      setOpenModal(true);
-    }
+  const callBack = useCallback(() => {
+    console.log('use Effect sart: ');
 
-    setTimeout(() => {
+    setOpenModal(true);
+
+    let timeOut = setTimeout(() => {
       setOpenModal(false);
-    }, 4000);
-  }, [emailSent]);
+    }, 3000);
+
+    return () => clearTimeout(timeOut);
+  });
 
   return (
     <AnimatePresence>

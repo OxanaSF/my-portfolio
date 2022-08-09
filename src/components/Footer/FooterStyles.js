@@ -21,4 +21,20 @@ export const FooterStyled = styled.footer`
       height: 3rem;
     }
   }
+
+  @media (max-width: 900px) {
+    padding: 0 2rem;
+    .social-media-icons {
+   
+    gap: 1rem;
+
+
+    .social-media-icon {
+      width: 2.7rem;
+      height: 2.7rem;
+    }
+  }
+
+  }
+
 `;

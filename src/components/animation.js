@@ -27,13 +27,13 @@ export const heroImageAnimation = {
 
 // About
 
-// export const aboutImageAnimation = {
-//   hidden: { x: -300 },
-//   show: {
-//     x: -10,
-//     transition: { duration: 1 },
-//   },
-// };
+export const aboutImageAnimation = {
+  hidden: { x: -300 },
+  show: {
+    x: -10,
+    transition: { duration: 1 },
+  },
+};
 
 export const aboutMeAnimation = {
   hidden: { opacity: 0, x: 300 },

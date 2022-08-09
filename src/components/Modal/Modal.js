@@ -1,11 +1,9 @@
-
 import styled from 'styled-components';
 
 const Modal = () => {
   return (
     <ModalStyled>
       <div className="modal-container">
-   
         <div className="container">
           <div className="animation">
             <div className="i-mail">
@@ -16,7 +14,10 @@ const Modal = () => {
               <div className="success-anim"></div>
             </div>
           </div>
-          <div className="message">Your message has been sent successfully!</div>
+          <div className="message">
+            <p>Your message has been sent</p>
+            <p>successfully!</p>
+          </div>
         </div>
       </div>
     </ModalStyled>
@@ -24,6 +25,13 @@ const Modal = () => {
 };
 
 const ModalStyled = styled.section`
+  border: 1px solid none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 70%;
+  padding: 5rem;
+  margin: auto;
+  border-radius: 1rem;
+
   .i-mail:after,
   .i-mail .mail-anim:after {
     content: '';
@@ -69,12 +77,11 @@ const ModalStyled = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
 
   .animation {
-    width: 540px;
-    height: 34px;
+    width: 33.75rem;
+    height: 2.125;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -88,7 +95,6 @@ const ModalStyled = styled.section`
     border: 2px solid black;
     position: relative;
     animation: transformS 0.3s linear;
-   
   }
   @keyframes transformS {
     50% {
@@ -162,12 +168,30 @@ const ModalStyled = styled.section`
   .message {
     text-align: center;
     margin-top: 5rem;
-    /* font-family: Roboto, sans-serif; */
     color: #2b5876;
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
     font-weight: 600;
+  }
 
+  @media (max-width: 900px) {
+    width: 90%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    .animation {
+      width: 90%;
+    }
+
+    .line {
+      padding: 1px 3rem;
+    }
+
+    .message {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+  
+  }
   }
 `;
 

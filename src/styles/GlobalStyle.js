@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'Mulish', sans-serif;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
     iframe {

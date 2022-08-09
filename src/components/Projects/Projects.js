@@ -88,34 +88,41 @@ const Projects = (props) => {
 
         <div className="projects-title-container">
           <div className="portfolio-title">Projects</div>
-          <CirculeStyled className="svg">
-            <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
-              <motion.circle
-                cx="50"
-                cy="50"
-                r="30"
-                pathLength="1"
-                className="indicator"
-                style={{ pathLength: scrollXProgress }}
-              />
-            </svg>
-          </CirculeStyled>
         </div>
       </div>
 
-      <h4>
-        Scroll{' '}
-        <span>
-          {' '}
-          <img
-            className="arrow-left"
-            src={`${process.env.PUBLIC_URL}/images/arrow-right24.png`}
-            alt="arrow to the left"
-          />
-        </span>{' '}
-        to expore
-      </h4>
+
+
+      <div className="scroll-area">
+        <h4>
+          Scroll{' '}
+          <span>
+            {' '}
+            <img
+              className="arrow-left"
+              src={`${process.env.PUBLIC_URL}/images/arrow-right24.png`}
+              alt="arrow to the left"
+            />
+          </span>{' '}
+          to expore
+        </h4>
+        <CirculeStyled className="svg">
+          <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
+            <motion.circle
+              cx="50"
+              cy="50"
+              r="30"
+              pathLength="1"
+              className="indicator"
+              style={{ pathLength: scrollXProgress }}
+            />
+          </svg>
+        </CirculeStyled>
+      </div>
+
+
+
 
       <ProjectColectionStyled ref={ref}>
         {webDevProjects.map((project, index) => {

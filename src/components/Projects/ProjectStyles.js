@@ -10,13 +10,15 @@ export const ProjectsStyled = styled(motion.section)`
 
   .projects-title-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     width: 60%;
     margin: 0 auto;
-    margin-bottom: 7rem;
-    overflow-x: hidden;
+    margin-bottom: 4rem;
+    
+   
   }
 
   .portfolio-title {
@@ -31,6 +33,8 @@ export const ProjectsStyled = styled(motion.section)`
       0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
   }
 
+
+
   h4 {
     text-align: right;
     margin-right: 2rem;
@@ -38,7 +42,15 @@ export const ProjectsStyled = styled(motion.section)`
     gap: 0.2rem;
     justify-content: right;
     align-items: center;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .scroll-area {
+    /* background: red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
   }
 
   .arrow-left {
@@ -50,9 +62,21 @@ export const ProjectsStyled = styled(motion.section)`
   }
 
   @media (max-width: 900px) {
+
+    h4 {
+      margin-bottom: 0;
+    }
+      
+    .scroll-area {
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
     .portfolio-title {
       font-size: 3.2rem;
-      margin-left: 2rem;
+      display: flex;
     }
   }
 `;
@@ -92,8 +116,8 @@ export const SideBarLeftStyled = styled.div`
 export const CirculeStyled = styled.div`
   #progress {
     transform: rotate(-90deg);
-    display: flex;
-    justify-content: right;
+    /* display: flex;
+    justify-content: right; */
   }
 
   circle {
@@ -159,6 +183,7 @@ export const ProjectColectionStyled = styled.ul`
 
   @media (max-width: 900px) {
     height: 20rem;
-    margin: 0 10%;
+    margin: 0 5%;
+    
   }
 `;
