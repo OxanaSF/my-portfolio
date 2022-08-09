@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html {
-  scroll-behavior: smooth;
-}
+        scroll-behavior: smooth;
+    }
 
 
 

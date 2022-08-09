@@ -24,7 +24,6 @@ export const SideBarStyled = styled(motion.div)`
     position: relative;
     display: inline-block;
 
-
     img {
       width: 100%;
     }
@@ -33,7 +32,7 @@ export const SideBarStyled = styled(motion.div)`
   .side-icon-container-letter {
     border: 0.2rem solid #007bff;
     border: 0.2rem solid #2b5876;
-      box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); 
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
   }
 `;
 
@@ -54,12 +53,17 @@ export const ContactStyled = styled(motion.section)`
     }
   }
 
-  form {
+  .form {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
     font-size: 16px;
+
+    label {
+      letter-spacing: 0.1rem;
+    }
+
     input {
       width: 100%;
       height: 3rem;
@@ -67,6 +71,8 @@ export const ContactStyled = styled(motion.section)`
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
+      margin-bottom: 0.2rem;
+
       &:focus {
         border: 2px solid #17e5be;
         border: 2px solid #2b5876;
@@ -90,7 +96,6 @@ export const ContactStyled = styled(motion.section)`
       label {
         margin-top: 1rem;
         margin-bottom: 0.3rem;
-        letter-spacing: 0.1rem;
       }
     }
     input[type='submit'] {
@@ -102,6 +107,23 @@ export const ContactStyled = styled(motion.section)`
       border: none;
       letter-spacing: 0.2rem;
       font-size: 1rem;
+    }
+
+    input[type='submit']:hover {
+      background-position: 100% 0;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      background-image: linear-gradient(
+        to right,
+        #29323c,
+        #485563,
+        #2b5876,
+        #4e4376
+      );
+      box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+      background: black;
     }
   }
 

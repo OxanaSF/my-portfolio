@@ -16,6 +16,7 @@ export const ProjectsStyled = styled(motion.section)`
     width: 60%;
     margin: 0 auto;
     margin-bottom: 7rem;
+    overflow-x: hidden;
   }
 
   .portfolio-title {

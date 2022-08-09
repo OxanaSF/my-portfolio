@@ -17,6 +17,8 @@ import {
 import { AnimatePresence } from 'framer-motion';
 import { useScroll } from '../useScroll';
 
+import Modal from '../Modal/Modal';
+
 const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID;
 const YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID;
 const YOUR_PUBLIC_KEY = process.env.REACT_APP_API_KEY;
@@ -24,7 +26,8 @@ const YOUR_PUBLIC_KEY = process.env.REACT_APP_API_KEY;
 const Contact = () => {
   const form = useRef();
   const [element, controls] = useScroll();
-  const [emailSent, setEmailSent] = useState(false)
+  const [emailSent, setEmailSent] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -40,7 +43,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log('message sent');
-          setEmailSent(true)
+          setEmailSent(true);
         },
         (error) => {
           console.log(error.text);
@@ -48,23 +51,42 @@ const Contact = () => {
       );
   };
 
+  useEffect(() => {
+    if (emailSent) {
+      setOpenModal(true);
+    }
+
+    setTimeout(() => {
+      setOpenModal(false);
+    }, 4000);
+  }, [emailSent]);
+
   return (
     <AnimatePresence>
       <ContactContainerStyled ref={element} id="contact">
-        <ContactStyled>
-          <div className="contact-header">
-            <h1 id="scroll-gallery">Contact Me</h1>
-          </div>
-          <form ref={form} onSubmit={sendEmail}>
-            <label>Name</label>
-            <input type="text" name="user_name" />
-            <label>Email</label>
-            <input type="email" name="user_email" />
-            <label>Message</label>
-            <textarea name="message" />
-            <input type="submit" value="Send" />
-          </form>
-        </ContactStyled>
+        {!openModal && (
+          <ContactStyled>
+            <div className="contact-header">
+              <h1 id="scroll-gallery">Contact Me</h1>
+            </div>
+
+            <form ref={form} onSubmit={sendEmail} className="form">
+              <label>Name</label>
+              <input type="text" name="user_name" />
+              <label>Email</label>
+              <input type="email" name="user_email" />
+              <label>Message</label>
+              <textarea name="message" />
+              <input type="submit" value="Send" />
+            </form>
+          </ContactStyled>
+        )}
+
+        {openModal && (
+          <ContactStyled>
+            <Modal closeModal={setOpenModal} />
+          </ContactStyled>
+        )}
 
         <SideBarStyled className="side-bar">
           <motion.div
@@ -116,11 +138,11 @@ const Contact = () => {
             variants={sideBarIconContactFromRight}
           >
             {/* <a href="#"> */}
-              <img
-                className="side-icon letter"
-                src={`${process.env.PUBLIC_URL}/images/letter.png`}
-                alt="letter icon"
-              />
+            <img
+              className="side-icon letter"
+              src={`${process.env.PUBLIC_URL}/images/letter.png`}
+              alt="letter icon"
+            />
             {/* </a> */}
           </motion.div>
         </SideBarStyled>

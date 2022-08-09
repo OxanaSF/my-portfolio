@@ -103,6 +103,7 @@ const Nav = () => {
             <AiOutlineClose onClick={menuToggleHandler} className={classes.header__content__toggle__close}/>
           )}
         </div>
+        
       </div>
     // </header>
   );
