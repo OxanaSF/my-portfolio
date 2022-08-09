@@ -30,7 +30,6 @@ export const SideBarStyled = styled(motion.div)`
   }
 
   .side-icon-container-letter {
-    border: 0.2rem solid #007bff;
     border: 0.2rem solid #2b5876;
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
   }
@@ -123,7 +122,7 @@ export const ContactStyled = styled(motion.section)`
         #4e4376
       );
       box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
-      background: black;
+      
     }
   }
 

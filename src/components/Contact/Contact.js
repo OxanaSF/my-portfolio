@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import {
   ContactStyled,
@@ -26,7 +26,6 @@ const YOUR_PUBLIC_KEY = process.env.REACT_APP_API_KEY;
 const Contact = () => {
   const form = useRef();
   const [element, controls] = useScroll();
-  const [emailSent, setEmailSent] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
   const sendEmail = (e) => {
@@ -139,13 +138,13 @@ const Contact = () => {
             animate={controls}
             variants={sideBarIconContactFromRight}
           >
-            {/* <a href="#"> */}
+   
             <img
               className="side-icon letter"
               src={`${process.env.PUBLIC_URL}/images/letter.png`}
               alt="letter icon"
             />
-            {/* </a> */}
+      
           </motion.div>
         </SideBarStyled>
       </ContactContainerStyled>

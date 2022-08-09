@@ -138,6 +138,7 @@ export const CirculeStyled = styled.div`
 `;
 
 export const ProjectColectionStyled = styled.ul`
+  overflow-y: hidden;
   display: flex;
   list-style: none;
   height: 25rem;
