@@ -9,16 +9,42 @@ import classes from './NavTwo.module.scss';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 
+
+
+
 const Nav = () => {
   const { pathname } = useLocation();
 
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [size, setSize] = useState({
-    width: undefined,
-    height: undefined,
+    width: window.innerWidth,
+    height: window.innerHeight,
   });
   const [subMenuOpen, setSubMenuOpen] = useState(false);
+
+
+
+
+
+  const UnderlineFragment = (props) => {
+    const [isUnderlined, setIsUnderlined] = useState(false)
+  
+    useEffect(() => {
+      if(pathname === props.path) {
+        setIsUnderlined(true)
+      }else {
+        setIsUnderlined(false)
+      }
+    }, [])
+  
+    return (
+      <li className={isUnderlined ? 'underlined' : null}>
+        {props.children}
+      </li>
+    )
+  }
+
 
 
 
@@ -66,6 +92,8 @@ const Nav = () => {
     </li>
   );
 
+
+
   return (
     <div className={classes.header__content}>
       <nav
@@ -88,14 +116,15 @@ const Nav = () => {
 
           </li>
 
-          <li>
+          <UnderlineFragment
+            path='/#projects'>
             <MiddleLink 
               to="/#projects" 
               onClick={aboutLinkHandler}
               >
               Projects
             </MiddleLink>
-          </li>
+          </UnderlineFragment>
 
           <li>
             <MiddleLink 
