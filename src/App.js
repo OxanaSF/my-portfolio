@@ -19,7 +19,7 @@ function App() {
 
       <Router>
        
-        {/* <AnimatePresence> */}
+        <AnimatePresence>
         <Nav />
           <Routes>
             <Route path="/" exact element={<Home />} />
@@ -27,7 +27,7 @@ function App() {
             <Route path="/blog" exact element={<Blog />} />
           </Routes>
           <Footer />
-        {/* </AnimatePresence> */}
+        </AnimatePresence>
         
       </Router>
     </div>

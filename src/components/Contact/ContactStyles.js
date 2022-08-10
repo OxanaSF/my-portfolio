@@ -39,6 +39,8 @@ export const ContactStyled = styled(motion.section)`
   text-align: center;
   width: 70%;
   margin: 15% auto;
+ 
+
 
   .contact-header {
     h1 {
@@ -49,6 +51,8 @@ export const ContactStyled = styled(motion.section)`
       text-transform: uppercase;
       font-weight: 700;
       padding-bottom: 3.125rem;
+      padding-left: 0.5rem;
+      
     }
   }
 
@@ -97,7 +101,15 @@ export const ContactStyled = styled(motion.section)`
         margin-bottom: 0.3rem;
       }
     }
-    input[type='submit'] {
+
+    .btn-submit {
+      width: 100%;
+      height: 3rem;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
+      margin-bottom: 0.2rem;
       height: 4rem;
       margin-top: 2rem;
       cursor: pointer;
@@ -108,7 +120,7 @@ export const ContactStyled = styled(motion.section)`
       font-size: 1rem;
     }
 
-    input[type='submit']:hover {
+    .btn-submit:hover {
       background-position: 100% 0;
       moz-transition: all 0.4s ease-in-out;
       -o-transition: all 0.4s ease-in-out;
@@ -122,15 +134,18 @@ export const ContactStyled = styled(motion.section)`
         #4e4376
       );
       box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
-      
     }
   }
 
   @media (max-width: 900px) {
     .contact-header {
       h1 {
-        font-size: 2.75rem;
+        font-size: 2.7rem;
       }
+    }
+
+    form {
+      padding-left: 0.5rem;
     }
   }
 `;

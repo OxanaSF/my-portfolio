@@ -33,8 +33,7 @@ export const AboutStyled = styled(LayoutStyled)`
     .side-icon-container-about {
       border: 0.2rem solid #007bff;
       border: 0.2rem solid #2b5876;
-      box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); 
-     
+      box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
     }
   }
 

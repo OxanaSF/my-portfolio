@@ -1,5 +1,6 @@
 import React, { useCallback, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+
 import {
   ContactStyled,
   ContactContainerStyled,
@@ -20,6 +21,7 @@ import { useScroll } from '../useScroll';
 
 import Modal from '../Modal/Modal';
 
+
 const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID;
 const YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID;
 const YOUR_PUBLIC_KEY = process.env.REACT_APP_API_KEY;
@@ -28,6 +30,7 @@ const Contact = () => {
   const form = useRef();
   const [element, controls] = useScroll();
   const [openModal, setOpenModal] = useState(false);
+
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -61,7 +64,7 @@ const Contact = () => {
     }, 3000);
 
     return () => clearTimeout(timeOut);
-  });
+  }, []);
 
   return (
     <AnimatePresence>
@@ -80,12 +83,12 @@ const Contact = () => {
               variants={aboutMeAnimation}
             >
               <label>Name</label>
-              <input type="text" name="user_name" />
+              <input type="text" name="user_name" required />
               <label>Email</label>
-              <input type="email" name="user_email" />
+              <input type="email" name="user_email" required />
               <label>Message</label>
-              <textarea name="message" />
-              <input type="submit" value="Send" />
+              <textarea name="message" required />
+              <button className='btn-submit'>Send</button>
             </motion.form>
           </ContactStyled>
         )}

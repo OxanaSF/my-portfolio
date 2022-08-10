@@ -2,7 +2,7 @@ export const webDevProjects = [
    
     {
       id: 1,
-      url: "https://la-nutrition.netlify.app/",
+      url: "https://urban-rhythms.netlify.app/",
     },
     {
       id: 2,
@@ -10,7 +10,7 @@ export const webDevProjects = [
     },
     {
       id: 3,
-      url: "https://urban-rhythms.netlify.app/",
+      url: "https://la-nutrition.netlify.app/",
     },
     {
       id: 4,

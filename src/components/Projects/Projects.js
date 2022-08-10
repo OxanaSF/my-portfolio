@@ -19,8 +19,6 @@ import { useScroll } from '../useScroll';
 
 import { webDevProjects } from '../../utils/data';
 
-import Iframe from 'react-iframe';
-
 const Projects = (props) => {
   const [element, controls] = useScroll();
   const ref = useRef(null);
@@ -130,16 +128,24 @@ const Projects = (props) => {
         {webDevProjects.map((project, index) => {
           return (
             <li key={index}>
-              <Iframe
+              <a 
+                  href={project.url} 
+                  // target={props.id} 
+                  className="link"
+                  target="_blank" rel="noreferrer"
+                  >
+                <img
+                  className="social-media-icon github"
+                  src={`${process.env.PUBLIC_URL}/images/link.png`}
+                  alt="github icon"
+                />
+              </a>
+              <iframe
                 title={index}
                 className="horizontal-item-inside"
                 src={project.url}
-                width="100%"
-                height="450px"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></Iframe>
+                name={props.id}
+              ></iframe>
             </li>
           );
         })}

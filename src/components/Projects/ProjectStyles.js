@@ -17,8 +17,6 @@ export const ProjectsStyled = styled(motion.section)`
     width: 60%;
     margin: 0 auto;
     margin-bottom: 4rem;
-    
-   
   }
 
   .portfolio-title {
@@ -33,8 +31,6 @@ export const ProjectsStyled = styled(motion.section)`
       0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
   }
 
-
-
   h4 {
     text-align: right;
     margin-right: 2rem;
@@ -42,11 +38,9 @@ export const ProjectsStyled = styled(motion.section)`
     gap: 0.2rem;
     justify-content: right;
     align-items: center;
-    /* margin-bottom: 2rem; */
   }
 
   .scroll-area {
-    /* background: red; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -62,17 +56,15 @@ export const ProjectsStyled = styled(motion.section)`
   }
 
   @media (max-width: 900px) {
-
     h4 {
       margin-bottom: 0;
     }
-      
+
     .scroll-area {
-    /* background: red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .portfolio-title {
       font-size: 3.2rem;
@@ -107,17 +99,14 @@ export const SideBarLeftStyled = styled.div`
   }
 
   .side-icon-container-projects {
-    border: 0.2rem solid #007bff;
     border: 0.2rem solid #2b5876;
-    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); 
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
   }
 `;
 
 export const CirculeStyled = styled.div`
   #progress {
     transform: rotate(-90deg);
-    /* display: flex;
-    justify-content: right; */
   }
 
   circle {
@@ -132,7 +121,6 @@ export const CirculeStyled = styled.div`
   }
 
   #progress .indicator {
-    stroke: #007bff;
     stroke: #2b5876;
   }
 `;
@@ -141,10 +129,13 @@ export const ProjectColectionStyled = styled(motion.ul)`
   overflow-y: hidden;
   display: flex;
   list-style: none;
-  height: 26rem;
+  height: 24rem;
   overflow-x: scroll;
   margin: 0 auto;
   margin-bottom: 10rem;
+  padding-left: 0.5rem;
+  
+  
 
   gap: 2rem;
   margin-left: 2rem;
@@ -156,26 +147,45 @@ export const ProjectColectionStyled = styled(motion.ul)`
     -webkit-border-radius: 1ex;
   }
 
-  ::-webkit-scrollbar-thumb {
-    background: #007bff;
-    background: #2b5876;
-    -webkit-border-radius: 1ex;
-  }
-
   ::-webkit-scrollbar-corner {
     background: #fff3;
   }
 
   li {
     width: 45rem;
-    flex: 0 0 200px;
-    /* background: var(--accent); */
-    margin: 0 20px 0 0;
-    border: 0.2rem solid rgb(225, 225, 225);
+    /* flex: 0 0 200px; */
+    /* margin: 0 20px 0 0; */
+    border: 1px solid rgb(220, 220, 220);
     border-radius: 1rem;
+    position: relative;
   }
   li:last-of-type {
     margin: 0;
+  }
+
+  .link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+
+   
+    img {
+      background: white;
+      width: 3.4rem;
+      height: 3.4rem;
+      padding: 0.2rem;
+      border: 0.2rem solid black;
+      /* box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); */
+      padding: 0.2rem;
+      border-radius: 20%;
+   
+    }
+    
   }
 
   .horizontal-item-inside {
@@ -185,7 +195,6 @@ export const ProjectColectionStyled = styled(motion.ul)`
 
   @media (max-width: 900px) {
     height: 20rem;
-    margin: 0 5%;
-    
+    margin: 0 6%;
   }
 `;

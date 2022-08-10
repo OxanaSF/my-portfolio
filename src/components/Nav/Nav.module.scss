@@ -65,7 +65,7 @@
           @include breakpoint(md) {
             margin-bottom: 0;
           }
-          // }
+
           a {
             text-decoration: none;
             color: inherit;
@@ -84,14 +84,11 @@
         }
       }
 
-      &.navlink{
+      &.navlink {
         height: 0.3rem;
         background: #2b5876;
         width: 100%;
-        /* width: 0%; */
-        /* position: relative; */
         bottom: 0;
-        /* left: 10rem; */
         border-radius: 2px;
       }
 
@@ -99,9 +96,6 @@
         transform: translate(100%);
       }
     }
-
-
-
 
     &__toggle {
       cursor: pointer;
@@ -112,6 +106,8 @@
       position: fixed;
       margin-left: 0.1rem;
       background: $light;
+      padding: 0;
+      margin: 0;
       border-radius: 0.1rem;
 
       &:hover {
