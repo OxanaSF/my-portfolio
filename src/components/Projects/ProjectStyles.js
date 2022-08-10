@@ -137,13 +137,14 @@ export const CirculeStyled = styled.div`
   }
 `;
 
-export const ProjectColectionStyled = styled.ul`
+export const ProjectColectionStyled = styled(motion.ul)`
   overflow-y: hidden;
   display: flex;
   list-style: none;
-  height: 25rem;
+  height: 26rem;
   overflow-x: scroll;
   margin: 0 auto;
+  margin-bottom: 10rem;
 
   gap: 2rem;
   margin-left: 2rem;
@@ -178,7 +179,7 @@ export const ProjectColectionStyled = styled.ul`
   }
 
   .horizontal-item-inside {
-    width: 43rem;
+    width: 36rem;
     border-radius: 0.8rem;
   }
 

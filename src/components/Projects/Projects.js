@@ -8,6 +8,7 @@ import {
 import { motion, useScroll as scroll } from 'framer-motion';
 
 import {
+  aboutMeAnimation,
   sideBarIconHomeFromLeft,
   sideBarIconUserFromLeft,
   sideBarIconProjectsFromLeft,
@@ -17,6 +18,8 @@ import {
 import { useScroll } from '../useScroll';
 
 import { webDevProjects } from '../../utils/data';
+
+import Iframe from "react-iframe";
 
 const Projects = (props) => {
   const [element, controls] = useScroll();
@@ -124,15 +127,26 @@ const Projects = (props) => {
 
 
 
-      <ProjectColectionStyled ref={ref}>
+      <ProjectColectionStyled ref={ref}
+      animate={controls} variants={aboutMeAnimation}
+      >
         {webDevProjects.map((project, index) => {
           return (
             <li key={index}>
-              <iframe
+              <Iframe
                 title={index}
                 className="horizontal-item-inside"
+            
+
                 src={project.url}
-              ></iframe>
+                width="100%"
+                height="450px"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              >
+                 <a href={project.url} target="_blank" rel="noreferrer"/>
+              </Iframe>
             </li>
           );
         })}

@@ -63,7 +63,7 @@ const Contact = () => {
   });
 
   return (
-    <AnimatePresence>
+    // <AnimatePresence>
       <ContactContainerStyled ref={element} id="contact">
         {!openModal && (
           <ContactStyled>
@@ -148,7 +148,7 @@ const Contact = () => {
           </motion.div>
         </SideBarStyled>
       </ContactContainerStyled>
-    </AnimatePresence>
+    // </AnimatePresence>
   );
 };
 

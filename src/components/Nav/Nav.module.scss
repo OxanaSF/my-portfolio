@@ -1,13 +1,6 @@
 @import '../../styles/variables.scss';
 
 .header {
-  //   background: $light;
-  //   height: $headerHeight;
-  //   transition: 0.3s ease all;
-  //   color: $light;
-  //   background: green;
-  //   border: 2px solid black;
-
   &__content {
     transition: 0.3s ease all;
     box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -24,12 +17,10 @@
 
     width: 100%;
 
-    // justify-content: space-between;
     position: relative;
     z-index: 100;
 
     @include breakpoint(md) {
-       
     }
 
     &__nav {
@@ -51,41 +42,28 @@
 
       @include breakpoint(md) {
         transform: none;
-        // flex-direction: row;
         background: transparent;
         width: 0%;
-      
 
-       
         position: static;
-        
 
         margin: 2rem;
-        // background: red;
-
-    
       }
-      ul {
-        // background: green;
 
+      ul {
         list-style: none;
         padding: 0;
         display: flex;
         flex-direction: column;
-        // margin-bottom: $spacing-lg;
         @include breakpoint(md) {
           flex-direction: row;
-         
-
         }
         li {
-          // &:not(:last-child) {
           margin-bottom: $spacing-lg;
           font-size: 1.875rem;
+
           @include breakpoint(md) {
             margin-bottom: 0;
-
-            // margin-right: $spacing-md;
           }
           // }
           a {
@@ -106,10 +84,24 @@
         }
       }
 
+      &.navlink{
+        height: 0.3rem;
+        background: #2b5876;
+        width: 100%;
+        /* width: 0%; */
+        /* position: relative; */
+        bottom: 0;
+        /* left: 10rem; */
+        border-radius: 2px;
+      }
+
       &.isMenu {
         transform: translate(100%);
       }
     }
+
+
+
 
     &__toggle {
       cursor: pointer;
@@ -119,17 +111,15 @@
       transition: 0.3s ease all;
       position: fixed;
       margin-left: 0.1rem;
+      background: $light;
+      border-radius: 0.1rem;
 
       &:hover {
         color: $primary;
       }
 
-   
-
       @include breakpoint(md) {
         display: none;
-
-    
       }
     }
   }
