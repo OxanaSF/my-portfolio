@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import {
   aboutMeAnimation,
-  aboutImgAnimation,
   sideBarIconHomeFromRight ,
   sideBarIconUserFromRight ,
   sideBarIconProjectsFromRight ,
@@ -19,8 +18,9 @@ const About = () => {
   const [element, controls] = useScroll();
 
   return (
-    <AboutStyled ref={element} id="about" animate={controls} variants={aboutMeAnimation}>
-      <ImageAboutStyled >
+    <AboutStyled ref={element} id="about"  animate={controls}
+    variants={aboutMeAnimation}>
+      <ImageAboutStyled>
         <div className="about-left-img">
           <img
             src={`${process.env.PUBLIC_URL}/images/oxana_img.jpeg`}

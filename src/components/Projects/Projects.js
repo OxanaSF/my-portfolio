@@ -19,7 +19,7 @@ import { useScroll } from '../useScroll';
 
 import { webDevProjects } from '../../utils/data';
 
-import Iframe from "react-iframe";
+import Iframe from 'react-iframe';
 
 const Projects = (props) => {
   const [element, controls] = useScroll();
@@ -94,8 +94,6 @@ const Projects = (props) => {
         </div>
       </div>
 
-
-
       <div className="scroll-area">
         <h4>
           Scroll{' '}
@@ -124,11 +122,10 @@ const Projects = (props) => {
         </CirculeStyled>
       </div>
 
-
-
-
-      <ProjectColectionStyled ref={ref}
-      animate={controls} variants={aboutMeAnimation}
+      <ProjectColectionStyled
+        ref={ref}
+        animate={controls}
+        variants={aboutMeAnimation}
       >
         {webDevProjects.map((project, index) => {
           return (
@@ -136,17 +133,13 @@ const Projects = (props) => {
               <Iframe
                 title={index}
                 className="horizontal-item-inside"
-            
-
                 src={project.url}
                 width="100%"
                 height="450px"
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              >
-                 <a href={project.url} target="_blank" rel="noreferrer"/>
-              </Iframe>
+              ></Iframe>
             </li>
           );
         })}

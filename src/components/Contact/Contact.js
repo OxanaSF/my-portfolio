@@ -8,6 +8,7 @@ import {
 import { motion } from 'framer-motion';
 
 import {
+  aboutMeAnimation,
   sideBarIconHomeFromRight,
   sideBarIconUserFromRight,
   sideBarIconProjectsFromRight,
@@ -63,7 +64,7 @@ const Contact = () => {
   });
 
   return (
-    // <AnimatePresence>
+    <AnimatePresence>
       <ContactContainerStyled ref={element} id="contact">
         {!openModal && (
           <ContactStyled>
@@ -71,7 +72,13 @@ const Contact = () => {
               <h1 id="scroll-gallery">Contact Me</h1>
             </div>
 
-            <form ref={form} onSubmit={sendEmail} className="form">
+            <motion.form
+              ref={form}
+              onSubmit={sendEmail}
+              className="form"
+              animate={controls}
+              variants={aboutMeAnimation}
+            >
               <label>Name</label>
               <input type="text" name="user_name" />
               <label>Email</label>
@@ -79,7 +86,7 @@ const Contact = () => {
               <label>Message</label>
               <textarea name="message" />
               <input type="submit" value="Send" />
-            </form>
+            </motion.form>
           </ContactStyled>
         )}
 
@@ -138,17 +145,15 @@ const Contact = () => {
             animate={controls}
             variants={sideBarIconContactFromRight}
           >
-   
             <img
               className="side-icon letter"
               src={`${process.env.PUBLIC_URL}/images/letter.png`}
               alt="letter icon"
             />
-      
           </motion.div>
         </SideBarStyled>
       </ContactContainerStyled>
-    // </AnimatePresence>
+    </AnimatePresence>
   );
 };
 
