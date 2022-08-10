@@ -19,8 +19,8 @@ const About = () => {
   const [element, controls] = useScroll();
 
   return (
-    <AboutStyled ref={element} id="about">
-      <ImageAboutStyled animate={controls} variants={aboutImgAnimation}>
+    <AboutStyled ref={element} id="about" animate={controls} variants={aboutMeAnimation}>
+      <ImageAboutStyled >
         <div className="about-left-img">
           <img
             src={`${process.env.PUBLIC_URL}/images/oxana_img.jpeg`}
@@ -29,7 +29,7 @@ const About = () => {
         </div>
       </ImageAboutStyled>
 
-      <DescriptionAboutStyled animate={controls} variants={aboutMeAnimation}>
+      <DescriptionAboutStyled>
         <div>
           <h2>About me</h2>
           <h6>Web App & Front-end Developer</h6>
