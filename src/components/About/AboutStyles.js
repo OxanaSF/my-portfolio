@@ -3,7 +3,7 @@ import { LayoutStyled, DescriptionStyled } from '../../styles/styles';
 import { motion } from 'framer-motion';
 
 export const AboutStyled = styled(LayoutStyled)`
-  margin: 10rem 0;
+  margin: 7rem 0;
   display: flex;
   /* flex-wrap: wrap; */
 

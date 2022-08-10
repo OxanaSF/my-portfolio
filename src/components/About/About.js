@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import {
-  aboutMeAnimation,
   sideBarIconHomeFromRight ,
   sideBarIconUserFromRight ,
   sideBarIconProjectsFromRight ,
@@ -18,11 +17,10 @@ const About = () => {
   const [element, controls] = useScroll();
 
   return (
-    <AboutStyled ref={element} id="about"  animate={controls}
-    variants={aboutMeAnimation}>
+    <AboutStyled ref={element} id="about">
       <ImageAboutStyled>
         <div className="about-left-img">
-          <img
+          <motion.img
             src={`${process.env.PUBLIC_URL}/images/oxana_img.jpeg`}
             alt="myself"
           />
@@ -33,13 +31,13 @@ const About = () => {
         <div>
           <h2>About me</h2>
           <h6>Web App & Front-end Developer</h6>
-          <p className="par1">
+          <motion.p className="par1" >
             Highly analytical, creative, and detail-oriented former attorney
             turned full stack web developer and software engineer. My technical
             skills include understanding of object-oriented design patterns and
             principles, software architecture, algorithms, knowledge of several
             programming languages and development tools.
-          </p>
+          </motion.p>
         </div>
         <div className="about-button">
           <a
