@@ -44,9 +44,7 @@
         transform: none;
         background: transparent;
         width: 0%;
-
         position: static;
-
         margin: 2rem;
       }
 
@@ -58,9 +56,15 @@
         @include breakpoint(md) {
           flex-direction: row;
         }
+        
+        li:nth-child(5) {  
+          margin-bottom: 0;
+        }
+
         li {
           margin-bottom: $spacing-lg;
           font-size: 1.875rem;
+
 
           @include breakpoint(md) {
             margin-bottom: 0;

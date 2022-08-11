@@ -130,7 +130,6 @@ const Projects = (props) => {
             <li key={index}>
               <a 
                   href={project.url} 
-                  // target={props.id} 
                   className="link"
                   target="_blank" rel="noreferrer"
                   >

@@ -180,7 +180,6 @@ export const ProjectColectionStyled = styled(motion.ul)`
       height: 3.4rem;
       padding: 0.2rem;
       border: 0.2rem solid black;
-      /* box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75); */
       padding: 0.2rem;
       border-radius: 20%;
    
