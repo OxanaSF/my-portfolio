@@ -8,6 +8,12 @@ import classes from './Nav.module.scss';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 
+
+import styled from 'styled-components';
+import {
+  lineBlogAnimation
+} from "../animation";
+
 const Nav = () => {
   const { pathname } = useLocation();
 
@@ -55,11 +61,16 @@ const Nav = () => {
   );
 
   const localHome = (
-    <li>
+    <motion.li>
       <MiddleLink to="/#top" onClick={aboutLinkHandler} key="home-local">
         Home
       </MiddleLink>
-    </li>
+      <LineStyled 
+         variants={lineBlogAnimation}
+         initial="hidden"
+         animate="show"
+      />
+    </motion.li>
   );
 
   return (
@@ -125,18 +136,17 @@ const Nav = () => {
   );
 };
 
-// const LineStyled = styled(motion.div)`
-//  .link{
-//   height: 0.3rem;
-//   background: #2b5876;
-//   width: 100%;
-//   /* width: 0%; */
-//   /* position: relative; */
-//   bottom: 0;
-//   /* left: 10rem; */
-//   border-radius: 2px;
-//  }
+const LineStyled = styled(motion.div)`
+ .link{
+  height: 0.3rem;
+  background: #2b5876;
+  border-radius: 2px;
+  height: 0.3rem;
+  width: 60%;
+  margin: auto;
 
-// `;
+ }
+
+`;
 
 export default Nav;
